@@ -1,0 +1,98 @@
+/* Colors letter and background */
+.bg-blue {
+    background: #373867;
+}
+
+.bg-white {
+    background: #EBECF0;
+}
+
+.bg-green {
+    background-color: #AACE9B;
+}
+
+.letter-blue {
+    color: #373867;
+}
+
+.letter-white {
+    color: #EBECF0;
+}
+
+/*  */
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.header {
+    position: absolute;
+    width: 80%;
+    left: 20%;
+}
+
+.header-logo {
+    position: relative;
+    padding: 45px 0px 45px 50px;
+}
+
+.header-title {
+    display: inline;
+    position: absolute;
+    padding: 40px 0px 0px 55px;
+    color: #AACE9B;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+
+}
+
+.aside {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+}
+
+.nav-logo {
+    padding: 5px 0px 0px 100px;
+    width: 80px;
+    height: 100px;
+}
+
+.nav-ul {
+    padding: 20px 50px 15px 40px;
+}
+
+.nav-ul-li {
+    padding: 20px 50px;
+    margin: 10px;
+    border: 1px solid #373867;
+    border-radius: 2px;
+    
+}
+
+.li-a {
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-other-op {
+    padding: 0px 10px ;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.nav-other-op-ul-li {
+    padding: 0px 44px;
+    margin: 10px;
+}
+
+.li-a-logo {
+    width: 30px;
+    height: 30px;
+    padding: 0px 20px;
+}
