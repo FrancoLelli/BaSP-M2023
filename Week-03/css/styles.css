@@ -141,8 +141,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-
-
 }
 
 .section-two-div h2 {
@@ -166,6 +164,7 @@ main {
 
 .section-three {
     padding: 20px 30px;
+    border-bottom: 3px solid #373867;
 }
 
 .section-three h2 {
@@ -238,4 +237,38 @@ main {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+}
+
+.section-four {
+    padding: 20px 30px;
+    border-bottom: 3px solid #373867;
+}
+
+.section-four h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 10px 0px;
+}
+
+.section-four-div {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    background-image: url("../img/background2-img-gym.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.section-four-div p{
+    width: 50%;
+    margin: auto;
+    padding: 150px 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
 }
