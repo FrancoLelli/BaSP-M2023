@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header class="header bg-blue">
+    <header class="bg-blue">
         <img class="header-logo" src="./img/radium-logo-letra.png" alt="Radium Rocket Logo Letters">
         <h1 class="header-title">MEGA ROCKET SA</h1>
     </header>
-    <aside class="aside bg-green">
+    <aside class="bg-green">
         <nav class="nav">
             <img class="nav-logo" src="./img/logo-rocket.jpg" alt="Radium Rocket Logo">
             <ul class="nav-ul">
@@ -52,53 +52,74 @@
         </nav>
     </aside>
     <main>
-        <section>
+        <section class="section-one">
             <h2>THE MAIN REASON OF HEALTH</h2>
             <p>
                 Component Body Maecenas interdum faucibus quam ac interdum. Donec facilisis vitae ipsum a ullamcorper. Proin interdum suscipit velit. Nullam pulvinar efficitur sapien ac rhoncus. Aenean scelerisque, nisi at interdum laoreet, est nisi sagittis enim, nec eleifend justo orci quis nisl. Morbi fringilla felis non ipsum dapibus, eget ornare tortor hendrerit. Curabitur ac eleifend orci. Donec condimentum ex non leo volutpat pretium. Cras aliquet quam quis semper egestas. Sed at ultricies turpis. Aenean cursus porta eleifend.
             </p>
+            <img src="./img/gym-persons.png" alt="personas en gym">
         </section>
-        <section>
-            <img src="./img/background-img-gym.png" alt="Fondo persona haciendo ejercicios">
-            <h2>
-                HOW CAN WE HELP YOU
-            </h2>
-            <ul>
-                <li><a href="#">TURN RESERVATION</a></li>
-                <li><a href="#">AGENT DISPLAY</a></li>
-                <li><a href="#">MEMBERSHIP MANAGMENT</a></li>
-                <li><a href="#">CONTACT AND SUGGESTION FORM</a></li>
-            </ul>
+        <section class="section-two">
+            <div class="section-two-div">
+                <h2 class="letter-white">
+                    HOW CAN WE HELP YOU
+                </h2>
+                <ul class="sec-two-list-type">
+                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">TURN RESERVATION</a></li>
+                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">AGENT DISPLAY</a></li>
+                </ul>
+                <ul class="sec-two-list-type">
+                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">MEMBERSHIP MANAGMENT</a></li>
+                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">CONTACT AND SUGGESTION FORM</a></li>
+
+                </ul>
+            </div>
         </section>
-        <section>
-            <h2>CONTACT</h2>
+        <section class="section-three">
+            <h2 class="letter-blue">CONTACT</h2>
             <img src="./img/mail.png" alt="logo email">
-            <form>
-                <label>Name</label>
-                <input type="text" placeholder="Insert your name">
+            <form class="form">
+                <div>
+                    <label>Name</label>
+                    <input type="text" placeholder="Insert your name">    
+                </div>
 
-                <label>Surname</label>
-                <input type="text" placeholder="Insert your surname">
+                <div>
+                    <label>Surname</label>
+                    <input type="text" placeholder="Insert your surname">    
+                </div>
 
-                <label>Email</label>
-                <input type="email" placeholder="Insert your e-mail">
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Insert your e-mail">
+                </div>
 
-                <label>Reason for contact: </label>
-
-                <input type="radio" name="empleoactual" value="tiempocompleto"> 
-                <label>I want to make a query or suggestion</label>
+                <div class="reason-group">
+                    <label class="reason-text">Reason for contact: </label>
+    
+                    <div>
+                        <input type="radio" name="empleoactual" value="tiempocompleto"> 
+                        <label>I want to make a query or suggestion</label>    
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="empleoactual" value="mediodia"> 
+                        <label>I want to make a claim</label>    
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="empleoactual" value="sinempleo"> 
+                        <label>I want to know the memberships and costs</label>    
+                    </div>
+                </div>
                 
-                <input type="radio" name="empleoactual" value="mediodia"> 
-                <label>I want to make a claim</label>
-                
-                <input type="radio" name="empleoactual" value="sinempleo"> 
-                <label>I want to know the memberships and costs</label>
-                
-                <label>Message</label>
-                <textarea cols="30" rows="10" placeholder="Type your message here"></textarea>
+                <div class="form-div-messages">
+                    <label class="label-messages">Message</label>
+                    <textarea cols="30" rows="10" placeholder="Type your message here"></textarea>
+                </div>
 
-                <button type="submit">Send message</button>
-                <button type="reset">Reset</button>
+                <button class="letter-blue bg-green" type="submit">Send message</button>
+                <button class="letter-blue bg-white" type="reset">Reset</button>
             </form>
         </section>
         <section>

@@ -26,7 +26,7 @@ body {
     font-style: normal;
 }
 
-.header {
+header {
     position: absolute;
     width: 80%;
     left: 20%;
@@ -48,14 +48,14 @@ body {
 
 }
 
-.aside {
+aside {
     position: fixed;
     width: 20%;
     height: 100%;
 }
 
 .nav-logo {
-    padding: 5px 0px 0px 100px;
+    padding: 5px 0px 0px 95px;
     width: 80px;
     height: 100px;
 }
@@ -69,7 +69,6 @@ body {
     margin: 10px;
     border: 1px solid #373867;
     border-radius: 2px;
-    
 }
 
 .li-a {
@@ -79,7 +78,7 @@ body {
 }
 
 .nav-other-op {
-    padding: 0px 10px ;
+    padding: 0px 10px;
     font-weight: 700;
     font-size: 25px;
     line-height: 35px;
@@ -94,5 +93,149 @@ body {
 .li-a-logo {
     width: 30px;
     height: 30px;
-    padding: 0px 20px;
+    padding: 0px 10px 0px 20px;
+}
+
+main {
+    position: relative;
+    width: 80%;
+    left: 20%;
+    top: 150px;
+
+}
+
+.section-one {
+    padding: 10px 20px;
+    border-bottom: 3px solid #373867;
+}
+
+.section-one h2 {
+    width: 50%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.section-one p {
+    width: 50%;
+    display: inline-block;
+}
+
+.section-one img {
+    position: relative;
+    width: 40%;
+    height: 40%;
+}
+
+.section-two {
+    padding: 10px 20px;
+    border-bottom: 3px solid #373867;
+}
+
+.section-two-div {
+    height: 500px;
+    border-radius: 10px;
+    background-image: url("../img/background-img-gym.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+
+}
+
+.section-two-div h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    padding: 50px 0px;
+}
+
+.sec-two-ul-li {
+    width: 60%;
+    margin: 20px;
+    padding: 30px 30px;
+    border: 1px solid #373867;
+    border-radius: 2px;
+}
+
+.sec-two-list-type {
+    display: inline-block;
+}
+
+.section-three {
+    padding: 20px 30px;
+}
+
+.section-three h2 {
+    display: inline;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.form div {
+    margin: 15px 0px;
+    padding: 0px 15px;
+}
+
+.form div label {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+    margin: 0px 10px;
+    color: #373867;
+}
+
+.form div input {
+    height: 40px;
+    width: 20%;
+    border: 1px solid #373867;
+    border-radius: 20px;
+}
+
+.form div input::placeholder {
+    padding: 5px;
+}
+
+.form div input:valid {
+    padding: 0px 10px;
+}
+
+.reason-text {
+    display: block;
+    padding: 10px 0px;
+}
+
+.reason-group div {
+    margin: 0px;
+}
+
+.reason-group div input {
+    width: 13px;
+    border: 1px solid #373867;
+    border-radius: 20px;
+}
+
+.label-messages {
+    display: block;
+}
+
+.form-div-messages textarea {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    width: 574px;
+    height: 97px;
+}
+
+.form button {
+    padding: 10px 30px;
+    margin: 10px;
+    border: 1px solid #373867;
+    font-family: 'Roboto';
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }
