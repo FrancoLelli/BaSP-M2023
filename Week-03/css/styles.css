@@ -315,8 +315,9 @@ main {
     position: absolute;
     top: 0;
     width: 40%;
-    padding: 20px 30px;;
-    
+    padding: 20px 30px;
+    ;
+
 }
 
 .section-five-div2 h2 {
@@ -324,6 +325,31 @@ main {
     font-size: 30px;
     line-height: 35px;
     padding: 10px 0px;
+}
+
+.section-five-div2-ul ul {
+    padding: 10px 0px;
+}
+
+
+.section-five-div2-ul li img {
+    position: relative;
+    right: 65px;
+}
+
+.section-five-div2-ul li h3,
+.section-five-div2-ul li ul li {
+    position: relative;
+    bottom: 40px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.section-five-div2-ul li h3 {
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
 }
 
 
@@ -346,12 +372,12 @@ footer small {
     line-height: 23px;
 }
 
-.footer-img-gmail{
+.footer-img-gmail {
     position: relative;
     bottom: 30px;
 }
 
-.footer-img-facebook{
+.footer-img-facebook {
     position: relative;
     left: 14px;
 }
@@ -360,4 +386,3 @@ footer small {
     position: relative;
     bottom: 12px;
 }
-
