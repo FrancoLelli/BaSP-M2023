@@ -77,7 +77,7 @@ aside {
     text-decoration: none;
 }
 
-.nav-other-op {
+.aside-other-op {
     padding: 0px 10px;
     font-weight: 700;
     font-size: 25px;
@@ -85,7 +85,7 @@ aside {
     text-align: center;
 }
 
-.nav-other-op-ul-li {
+.aside-other-op-ul-li {
     padding: 0px 44px;
     margin: 10px;
 }
@@ -205,6 +205,9 @@ main {
 .reason-text {
     display: block;
     padding: 10px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
 }
 
 .reason-group div {
@@ -263,7 +266,7 @@ main {
     text-align: center;
 }
 
-.section-four-div p{
+.section-four-div p {
     width: 50%;
     margin: auto;
     padding: 150px 0px;
@@ -272,3 +275,20 @@ main {
     font-size: 20px;
     text-align: center;
 }
+
+.section-five {
+    padding: 20px 30px;
+}
+
+.section-five-div {
+    display: inline-block;
+    width: 50%;
+}
+
+/* footer {
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    left: 20%;
+    bottom: 0;
+} */
