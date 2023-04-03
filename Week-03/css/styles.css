@@ -45,13 +45,18 @@ textarea {
 input {
     height: 40px;
     width: 20%;
-    border: 1px solid #373867;
     border-radius: 20px;
     vertical-align: middle;
 }
 
 form {
     padding: 20px 20px;
+}
+
+.line-section {
+    border: 2px solid #373867;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .bg-blue {
@@ -148,9 +153,8 @@ form {
     padding: 0px 10px 0px 20px;
 }
 
-.section-one {
+.section {
     padding: 10px 20px;
-    border-bottom: 3px solid #373867;
 }
 
 .section-one h2 {
@@ -171,11 +175,6 @@ form {
     position: relative;
     width: 40%;
     height: 40%;
-}
-
-.section-two {
-    padding: 10px 20px;
-    border-bottom: 3px solid #373867;
 }
 
 .section-two-div {
@@ -208,11 +207,6 @@ form {
     display: inline-block;
 }
 
-.section-three {
-    padding: 20px 30px;
-    border-bottom: 3px solid #373867;
-}
-
 .section-three h2 {
     display: inline;
     font-weight: 700;
@@ -239,11 +233,6 @@ input[type=radio] {
     width: 13px;
     border-radius: 20px;
     accent-color: #34636E;
-}
-
-.section-four {
-    padding: 20px 30px;
-    border-bottom: 3px solid #373867;
 }
 
 .section-four h2 {
