@@ -50,6 +50,10 @@ input {
     vertical-align: middle;
 }
 
+form {
+    padding: 20px 20px;
+}
+
 .bg-blue {
     background-color: #373867;
 }
@@ -224,6 +228,10 @@ input {
 .form label {
     display: block;
     padding: 10px 0px;
+}
+
+.form label input {
+    margin-left: 20px;
 }
 
 .reason-group div input,
