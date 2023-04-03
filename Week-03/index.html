@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header class="bg-blue">
-        <img class="header-logo" src="./img/radium-logo-letra.png" alt="Radium Rocket Logo Letters">
-        <h1 class="header-title">MEGA ROCKET SA</h1>
-    </header>
     <aside class="bg-green">
         <nav class="nav">
             <img class="nav-logo" src="./img/logo-rocket.jpg" alt="Radium Rocket Logo">
@@ -49,6 +45,10 @@
             </li>
         </ul>
     </aside>
+    <header class="bg-blue">
+        <img class="header-logo" src="./img/radium-logo-letra.png" alt="Radium Rocket Logo Letters">
+        <h1 class="header-title">MEGA ROCKET SA</h1>
+    </header>
     <main>
         <section class="section-one">
             <h2 class="letter-blue">THE MAIN REASON OF HEALTH</h2>
@@ -68,12 +68,28 @@
                     HOW CAN WE HELP YOU
                 </h2>
                 <ul class="sec-two-list-type">
-                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">TURN RESERVATION</a></li>
-                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">AGENT DISPLAY</a></li>
+                    <li class="sec-two-ul-li bg-white">
+                        <p class="li-a letter-blue" href="#">
+                            TURN RESERVATION
+                        </p>
+                    </li>
+                    <li class="sec-two-ul-li bg-white">
+                        <p class="li-a letter-blue" href="#">
+                            AGENT DISPLAY
+                        </p>
+                    </li>
                 </ul>
                 <ul class="sec-two-list-type">
-                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">MEMBERSHIP MANAGMENT</a></li>
-                    <li class="sec-two-ul-li bg-white"><a class="li-a letter-blue" href="#">CONTACT AND SUGGESTION FORM</a></li>
+                    <li class="sec-two-ul-li bg-white">
+                        <p class="li-a letter-blue" href="#">
+                            MEMBERSHIP MANAGMENT
+                        </p>
+                    </li>
+                    <li class="sec-two-ul-li bg-white">
+                        <p class="li-a letter-blue" href="#">
+                            CONTACT AND SUGGESTION FORM
+                        </p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -81,43 +97,37 @@
             <h2 class="letter-blue">CONTACT</h2>
             <img src="./img/mail.png" alt="email logo">
             <form class="form">
-                <div>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" placeholder="Insert your name">    
-                </div>
-                <div>
-                    <label for="surname">Surname</label>
-                    <input id="surname" type="text" placeholder="Insert your surname">    
-                </div>
-                <div>
-                    <label for="email">Email</label>
+                <label class="letter-blue" for="name">
+                    Name 
+                    <input id="name" type="text" placeholder="Insert your name">
+                </label>
+                <label class="letter-blue"  for="surname">
+                    Surname
+                    <input id="surname" type="text" placeholder="Insert your surname">
+                </label>
+                <label class="letter-blue"  for="email">
+                    Email
                     <input id="email" type="email" placeholder="Insert your e-mail">
-                </div>
-
-                <div class="reason-group">
-                    <h3 class="reason-text letter-blue">Reason for contact: </h3>
-    
-                    <div>
-                        <input id="option1" type="radio" name="reason-contact" value="suggestion"> 
-                        <label for="option1">I want to make a query or suggestion</label>    
-                    </div>
-                    
-                    <div>
-                        <input id="option2" type="radio" name="reason-contact" value="claim"> 
-                        <label for="option2">I want to make a claim</label>    
-                    </div>
-                    
-                    <div>
-                        <input id="option3" type="radio" name="reason-contact" value="membership-cost"> 
-                        <label for="option3">I want to know the memberships and costs</label>    
-                    </div>
-                </div>           
-                <div class="form-div-messages">
-                    <label for="message" class="label-messages">Message</label>
+                </label>   
+                <h3 class="subtitles letter-blue">Reason for contact: </h3>
+                <label class="letter-blue"  for="option1">
+                    <input id="option1" type="radio" name="reason-contact" value="suggestion"> 
+                    I want to make a query or suggestion
+                </label>    
+                <label class="letter-blue"  for="option2">
+                    <input id="option2" type="radio" name="reason-contact" value="claim"> 
+                    I want to make a claim
+                </label>    
+                <label class="letter-blue"  for="option3">
+                    <input id="option3" type="radio" name="reason-contact" value="membership-cost"> 
+                    I want to know the memberships and costs
+                </label>            
+                <label for="message" class="subtitles letter-blue">
+                    Message
                     <textarea id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
-                </div>
-                <button class="letter-blue bg-green" type="submit">Send message</button>
-                <button class="letter-blue bg-white" type="reset">Reset</button>
+                </label>
+                <button class="btn letter-blue bg-green" type="submit">Send message</button>
+                <button class="btn letter-blue bg-white" type="reset">Reset</button>
             </form>
         </section>
         <section class="section-four">
@@ -131,38 +141,38 @@
             </div>
         </section>
         <section class="section-five">
-            <div class="section-five-div1">
+            <div class="section-five-div">
                 <h2 class="letter-blue">ACTIVITIES</h2>
                 <ul>
                     <li>
-                        <img src="./img/pesas.png" alt="gym weights">
+                        <img class="img-with-text" src="./img/pesas.png" alt="gym weights">
                         Crossfit
                     </li>
                     <li>
-                        <img src="./img/brazo-gym.png" alt="arm">
+                        <img class="img-with-text" src="./img/brazo-gym.png" alt="arm">
                         Fitness
                     </li>
                     <li>
-                        <img src="./img/bici-gym.png" alt="bike">
+                        <img class="img-with-text" src="./img/bici-gym.png" alt="bike">
                         Spinning
                     </li>
                     <li>
-                        <img src="./img/machine-gym.png" alt="gym machine">
+                        <img class="img-with-text" src="./img/machine-gym.png" alt="gym machine">
                         Functional
                     </li>
                     <li>
-                        <img src="./img/guante-gym.png" alt="boxing glove">
+                        <img class="img-with-text" src="./img/guante-gym.png" alt="boxing glove">
                         Box
                     </li>
                 </ul>
             </div>
-            <div class="section-five-div2">
+            <div class="section-five-div">
                 <h2>MEMBERSHIP TYPES</h2>
-                <ul class="section-five-div2-ul">
-                    <li>
+                <ul class="section-five-ul">
+                    <li class="sec-five-li">
                         <img src="./img/escudo.png" alt="shield">
-                        <h3>Black membership</h3>
                         <ul>
+                            <h3>Black membership</h3>
                             <li>-Free access to the weight room</li>
                             <li>-Free acces to classes prior</li>
                             <li>-Registration</li>
@@ -170,19 +180,19 @@
                             <li>-Grid display</li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="sec-five-li">
                         <img src="./img/thunder.png" alt="thunderbolt">
-                        <h3>Classic membership</h3>
                         <ul>
+                            <h3>Classic membership</h3>
                             <li>-Free access to the weight room</li>
                             <li>-Personalized monitoring by a coach</li>
                             <li>-Grid display</li>
                         </ul>
                     </li>
-                    <li class="section-ul-with-padding">
+                    <li class="sec-five-li">
                         <img src="./img/corazon.png" alt="heart">
-                        <h3>Only classes membership</h3>
                         <ul>
+                            <h3>Only classes membership</h3>
                             <li>-Free access to the weight room</li>
                             <li>-Grid display</li>
                         </ul>
@@ -194,13 +204,13 @@
     <footer class="bg-blue">
         <small>Copyright © 2022 Radium Rocket. All rights reserved.</small>
         <a href="mailto:info@Rocket.com">
-            <img class="footer-img-gmail" src="./img/gmail-logo.png" alt="gmail logo">
+            <img class="footer-img-gmail" src="./img/gmail.png" alt="gmail logo">
         </a>
         <a href="https://www.instagram.com/">
-            <img class="footer-img-facebook"  src="./img/facebook-logo.png" alt="facebook logo">
+            <img class="footer-img-facebook"  src="./img/facebook.png" alt="facebook logo">
         </a>
         <a href="https://es-la.facebook.com/">
-            <img class="footer-img-insta" src="./img/instagram-logo.png" alt="instagram logo">
+            <img class="footer-img-insta" src="./img/instagram.png" alt="instagram logo">
         </a>
     </footer>
 </body>
