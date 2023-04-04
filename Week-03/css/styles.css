@@ -182,10 +182,11 @@ footer small {
 }
 
 .section-one p {
-    position: relative;
     display: inline-block;
     width: 50%;
-    bottom: 200px;
+    padding: 10px 0px;
+    vertical-align: top;
+    font-size: 20px;
 }
 
 .section-one img {
