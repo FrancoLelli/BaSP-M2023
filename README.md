@@ -9,5 +9,8 @@ We code figma's landing page in HTML
 ## Week 03
 We add css to the landing page
 
+## Week 04
+we make the landing responsive
+
 ## Authors
 - Franco Gaston Lelli
