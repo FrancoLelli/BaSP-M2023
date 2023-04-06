@@ -1,0 +1,336 @@
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* header {
+    position: relative;
+    width: 80%;
+    left: 20%;
+}
+
+aside {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+}
+
+a,
+p,
+label,
+li {
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+    display: block;
+    width: 80%;
+    left: 20%;
+}
+
+textarea {
+    display: block;
+    width: 574px;
+    height: 97px;
+    margin: 10px 20px;
+}
+
+input {
+    height: 40px;
+    width: 20%;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+form {
+    padding: 20px 20px;
+}
+
+img.img-with-text {
+    padding: 20px 10px;
+    vertical-align: middle;
+}
+
+footer {
+    position: relative;
+    width: 80%;
+    left: 20%;
+    text-align: center;
+}
+
+footer small {
+    position: relative;
+    bottom: 50px;
+    padding: 0px 175px 0px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.line-section {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #373867;
+}
+
+.bg-blue {
+    background-color: #373867;
+}
+
+.bg-white {
+    background-color: #EBECF0;
+}
+
+.bg-green {
+    background-color: #AACE9B;
+}
+
+.letter-blue {
+    color: #373867;
+}
+
+.letter-white {
+    color: #EBECF0;
+}
+
+.subtitles {
+    display: block;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    color: #373867;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.btn {
+    padding: 10px 30px;
+    margin: 10px;
+    border: 1px solid #373867;
+    border-radius: 2px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.header-logo {
+    position: relative;
+    padding: 45px 0px 45px 50px;
+}
+
+.header-title {
+    position: absolute;
+    display: inline;
+    padding: 40px 0px 0px 55px;
+    color: #AACE9B;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.nav-logo {
+    padding: 5px 0px 0px 95px;
+    width: 80px;
+    height: 100px;
+}
+
+.nav-ul {
+    padding: 20px 50px 15px 40px;
+}
+
+.nav-ul-li {
+    padding: 20px 50px;
+    margin: 10px;
+    border: 1px solid #373867;
+    border-radius: 2px;
+}
+
+.aside-other-op {
+    padding: 0px 10px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.aside-other-op-ul-li {
+    padding: 0px 44px;
+    margin: 10px;
+}
+
+.li-a-logo {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 6px;
+    padding: 0px 10px 0px 20px;
+}
+
+.section {
+    padding: 10px 20px;
+}
+
+.section-one h2 {
+    width: 50%;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.section-one p {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 0px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+.section-one img {
+    position: relative;
+    width: 40%;
+    height: 40%;
+}
+
+.section-two-div {
+    height: 500px;
+    border-radius: 10px;
+    background-image: url("../img/background-img-gym.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.section-two-div h2 {
+    padding: 50px 0px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.sec-two-ul-li {
+    width: 60%;
+    margin: 20px;
+    padding: 30px 30px;
+    border: 1px solid #373867;
+    border-radius: 2px;
+}
+
+.sec-two-list-type {
+    display: inline-block;
+}
+
+.section-three h2 {
+    display: inline;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.section-three img {
+    position: relative;
+    top: 13px;
+}
+
+.form label {
+    display: block;
+    padding: 10px 0px;
+}
+
+.form label input {
+    margin-left: 20px;
+}
+
+.reason-group div input,
+input[type=radio] {
+    width: 13px;
+    border-radius: 20px;
+    accent-color: #34636E;
+}
+
+.section-four h2 {
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.section-four-div {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    background-image: url("../img/background2-img-gym.png");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.section-four-div p {
+    width: 50%;
+    margin: auto;
+    padding: 150px 0px;
+    font-size: 20px;
+}
+
+.section-five {
+    padding: 20px 30px;
+}
+
+.section-five-div {
+    display: inline-block;
+    padding: 20px 0px;
+    margin-left: 167px;
+    vertical-align: middle;
+}
+
+.section-five-div h2 {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.sec-five-li ul,
+.sec-five-li img {
+    display: inline-block;
+    margin: 50px 0px;
+    vertical-align: middle;
+}
+
+.sec-five-li ul h3 {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.sec-five-li ul li {
+    padding: 5px 10px;
+}
+
+.footer-img-gmail {
+    position: relative;
+    bottom: 30px;
+}
+
+.footer-img-facebook {
+    position: relative;
+    left: 14px;
+}
+
+.footer-img-insta {
+    position: relative;
+    bottom: 12px;
+} */

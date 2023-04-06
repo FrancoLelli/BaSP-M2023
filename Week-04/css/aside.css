@@ -1,0 +1,32 @@
+aside {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.aside-other-op, .aside-other-op-ul, .nav-logo-desktop {
+  display: none;
+}
+
+.aside-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.img-hamburger {
+  width: 150px;
+  padding: 20px;
+  align-self: start;
+}
+
+.nav-ul-li {
+  text-align: center;
+  padding: 20px 50px;
+  margin: 10px;
+  border: 1px solid #373867;
+  border-radius: 2px;
+}
