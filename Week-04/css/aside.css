@@ -3,6 +3,7 @@ aside {
   background-color: white;
   height: 100%;
   width: 100%;
+  font-weight: bold;
 }
 
 .aside-other-op, .aside-other-op-ul, .nav-logo-desktop {
@@ -18,15 +19,70 @@ aside {
 }
 
 .img-hamburger {
-  width: 150px;
+  width: 130px;
   padding: 20px;
   align-self: start;
 }
 
+.nav-ul-li:nth-child(4) {
+  display: none;
+}
+
 .nav-ul-li {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 400px;
   padding: 20px 50px;
-  margin: 10px;
+  margin: 80px auto;
   border: 1px solid #373867;
-  border-radius: 2px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 70px;
+}
+
+.ul-info {
+  margin: 10px 0px;
+  font-size: 40px;
+}
+
+.ul-info-li {
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.a-info {
+  display: flex;
+  align-items: center;
+}
+
+.a-info-img {
+  width: 60px;
+}
+
+.aside-div-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside-div-phone img {
+  width: 200px;
+}
+
+.aside-div-phone p {
+  margin: 20px 0px;
+  font-size: 50px;
+}
+
+.aside-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.aside-logos a {
+  padding: 10px 10px;
 }

@@ -1,9 +1,41 @@
-body {
+html {
     font-family: 'Roboto';
     font-style: normal;
+}
+
+body {
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-blue {
+    background-color: #373867;
+}
+
+.bg-white {
+    background-color: #EBECF0;
+}
+
+.bg-green {
+    background-color: #AACE9B;
+}
+
+.letter-blue {
+    color: #373867;
+}
+
+.letter-white {
+    color: #EBECF0;
+}
+
+.letter-green {
+    color: #34646F;
 }
 
 /* header {
