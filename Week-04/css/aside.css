@@ -1,5 +1,4 @@
 aside {
-  display: none;
   position: fixed;
   background-color: white;
   height: 100%;
@@ -11,6 +10,7 @@ aside {
   display: none;
 }
 
+ 
 .aside-div {
   display: flex;
   flex-direction: column;
@@ -20,11 +20,12 @@ aside {
 }
 
 .img-hamburger {
-  width: 130px;
+  width: 30px;
   padding: 20px;
   align-self: start;
   cursor: pointer;
 }
+
 
 .nav-ul-li:nth-child(4) {
   display: none;
@@ -34,25 +35,14 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 400px;
+  height: -2px;
+  width: 105px;
   padding: 20px 50px;
-  margin: 80px auto;
+  margin: 23px auto;
   border: 1px solid green;
   border-radius: 5px;
   text-align: center;
-  font-size: 70px;
   -webkit-text-stroke: 1px yellowgreen;
-}
-
-.ul-info {
-  margin: 10px 0px;
-  font-size: 40px;
-}
-
-.ul-info-li {
-  align-items: center;
-  margin: 20px 0px;
 }
 
 .a-info {
@@ -61,7 +51,9 @@ aside {
 }
 
 .a-info-img {
-  width: 60px;
+  width: 30px;
+  height: 30px;
+  margin: 5px 0px;
 }
 
 .aside-div-phone {
@@ -71,12 +63,7 @@ aside {
 }
 
 .aside-div-phone img {
-  width: 200px;
-}
-
-.aside-div-phone p {
-  margin: 20px 0px;
-  font-size: 50px;
+  width: 60px;
 }
 
 .aside-logos {
@@ -87,9 +74,14 @@ aside {
 }
 
 .aside-logos a {
-  padding: 10px 10px;
+  padding: 0px 5px;
 }
 
+.aside-logos-img {
+  width: 23px;
+  height: 21px;
+}
+/*
 @media all and (min-width: 480px) {
   .nav-ul-li {
     height: 50px;
@@ -105,4 +97,4 @@ aside {
   .aside-div-phone img {
     width: 151px;
   }
-}
+} */
