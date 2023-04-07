@@ -8,7 +8,7 @@ aside {
   font-weight: bold;
 }
 
-.aside-other-op, .aside-other-op-ul, .nav-logo-desktop {
+.div-other-op, .nav-logo-desktop {
   display: none;
 }
 
@@ -82,20 +82,65 @@ aside {
   width: 23px;
   height: 21px;
 }
-/*
+
 @media all and (min-width: 480px) {
-  .nav-ul-li {
-    height: 50px;
-    width: 346px;
-    margin: 60px auto;
+  aside {
+    display: block;
+    width: 25%;
+    background-color: #AACE9B;
   }
 
-  .ul-info {
+  .aside-div {
+    justify-content: space-around;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-logo-desktop {
+    display: block;
+    width: 50px;
+  }
+
+  .nav-ul-li:nth-child(4) {
+    display: flex;
+  }
+
+  .nav-ul-li{
+    width: 0;
+    height: 0px;
+    -webkit-text-stroke: 0.5px yellowgreen;
+    font-size: 15px;
+  }
+
+  .div-other-op {
+    display: block;
+    font-size: 10px;
+  }
+
+  .aside-other-op-ul {
+    margin: 15px 0px;
+  }
+
+  .aside-other-op-ul li {
     margin: 10px 0px;
-    font-size: 30px;
   }
 
-  .aside-div-phone img {
-    width: 151px;
+  .a-info {
+    font-size: 8px;
   }
-} */
+
+  .a-info-img {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0px;
+}
+
+  .img-hamburger, .aside-logos, .aside-div-phone {
+    display: none;
+  }
+
+}

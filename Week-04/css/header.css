@@ -13,3 +13,16 @@ header {
   margin: auto;
   color: #AACE9B;
 }
+
+@media only screen and (min-width: 480px) {
+
+  header {
+    padding: 15px;
+  }
+
+  .header-logo {
+    display: block;
+    width: 150px;
+    margin: 5px 0px;
+  }
+}

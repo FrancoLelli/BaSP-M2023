@@ -226,6 +226,9 @@
 .sec-five-ul li{
   font-size: 10px;
 }
+
+@media all and (min-width: 480px) {
+}
 /*
 
 
