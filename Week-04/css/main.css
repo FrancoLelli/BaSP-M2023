@@ -172,3 +172,39 @@
   line-height: 80px;
   text-align: justify;
 }
+
+.section-five {
+  height: 100vh;
+  font-size: 70px;
+}
+
+.section-five-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.section-five-ul {
+  margin: 20px 0px;
+}
+
+.img-with-text {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+.img {
+  width: 130px;
+  height: 120px;
+  vertical-align: middle;
+}
+
+.sec-five-li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
