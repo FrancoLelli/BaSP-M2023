@@ -23,6 +23,7 @@ aside {
   width: 130px;
   padding: 20px;
   align-self: start;
+  cursor: pointer;
 }
 
 .nav-ul-li:nth-child(4) {

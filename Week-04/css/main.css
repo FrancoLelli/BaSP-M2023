@@ -174,7 +174,7 @@
 }
 
 .section-five {
-  height: 100vh;
+  min-height: 100vh;
   font-size: 70px;
 }
 
@@ -188,6 +188,7 @@
 
 .section-five-ul {
   margin: 20px 0px;
+  font-size: 40px;
 }
 
 .img-with-text {
@@ -197,14 +198,20 @@
 }
 
 .img {
-  width: 130px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
+  margin: 0px 30px;
   vertical-align: middle;
 }
 
 .sec-five-li{
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 40px 0px;
+  font-weight: bold;
+}
+
+.ul-title {
+  font-size: 50px;
+  margin: 20px 0px;
 }
