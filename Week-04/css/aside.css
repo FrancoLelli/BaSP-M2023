@@ -38,10 +38,11 @@ aside {
   width: 400px;
   padding: 20px 50px;
   margin: 80px auto;
-  border: 1px solid #373867;
+  border: 1px solid green;
   border-radius: 5px;
   text-align: center;
   font-size: 70px;
+  -webkit-text-stroke: 1px yellowgreen;
 }
 
 .ul-info {
@@ -87,4 +88,21 @@ aside {
 
 .aside-logos a {
   padding: 10px 10px;
+}
+
+@media all and (min-width: 480px) {
+  .nav-ul-li {
+    height: 50px;
+    width: 346px;
+    margin: 60px auto;
+  }
+
+  .ul-info {
+    margin: 10px 0px;
+    font-size: 30px;
+  }
+
+  .aside-div-phone img {
+    width: 151px;
+  }
 }

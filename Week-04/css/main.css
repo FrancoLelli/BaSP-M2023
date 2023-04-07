@@ -74,7 +74,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
 }
 
 .section-three-div {
@@ -214,4 +213,28 @@
 .ul-title {
   font-size: 50px;
   margin: 20px 0px;
+}
+
+@media only screen and (min-width: 480px) {
+  .section-one-div p {
+    font-size: 40px;
+  }
+  
+  .sec-two-list-type li {
+    height: 111px;
+    margin: 12px 0px;
+  }
+
+  .ul-p {
+    font-size: 20px;
+  }
+
+  .section-three {
+    margin: 30px 0px;
+  }
+
+  .section-three-p {
+    font-size: 40px;
+  }
+
 }
