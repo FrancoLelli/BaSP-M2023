@@ -1,11 +1,8 @@
-html {
-    font-family: 'Roboto';
-    font-style: normal;
-}
-
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
 }
 
 a {
