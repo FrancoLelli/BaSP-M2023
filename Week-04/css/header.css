@@ -10,7 +10,7 @@ header {
 }
 
 .header-title {
-  margin: auto;
+  margin: 0px 18px;
   color: #AACE9B;
 }
 
@@ -18,12 +18,20 @@ header {
 
   header {
     padding: 15px;
-    font-size: 15px;
   }
-
+  
   .header-logo {
     display: block;
-    width: 150px;
-    margin: 5px 0px;
+    width: 150px;   
+  }
+  
+  .header-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-title {
+    font-size: 1.4rem;
   }
 }

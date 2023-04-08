@@ -14,3 +14,14 @@
   width: 13px;
   height: 12px;
 }
+
+@media only screen and (min-width: 780px) {
+  .footer-text {
+    width: 50%;
+  }
+
+  .footer-img {
+    width: 39px;
+    height: 33px;
+  }
+}
