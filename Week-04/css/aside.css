@@ -157,6 +157,7 @@ aside {
 @media screen and (min-width: 1024px) {
   .nav-ul-li {
     width: 40%;
+    border: 1px solid #373867;
     -webkit-text-stroke: 0px;
    }
 }

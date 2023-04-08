@@ -292,6 +292,7 @@
 
   .section-one-div {
     flex-direction: row;
+    align-items: flex-start;
     padding: 20px;
   }
 
@@ -309,6 +310,11 @@
 
   .sec-two-list-type {
     margin: 20px;
+  }
+
+  .sec-two-list-type li:hover {
+    opacity: 0.8;
+    cursor: pointer;
   }
 
   .section-three {
