@@ -235,9 +235,24 @@
 
 @media all and (min-width: 480px) {
 
+  .section-four {
+    font-size: 1.5rem;
+  }
+
+  .section-five-title {
+    font-size: 1.5rem;
+}
+
+  .img-with-text {
+    font-size: 1.3rem;
+  }
+
   .section-five-img2 {
     width: 25px;
     height: 25px;
+  }
+  .sec-five-ul li {
+    font-size: 1rem;
   }
 
 }
