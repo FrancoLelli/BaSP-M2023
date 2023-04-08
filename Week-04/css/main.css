@@ -305,4 +305,10 @@
   .sec-two-list-type {
     margin: 20px;
   }
+
+  .section-five {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
 }
