@@ -108,7 +108,7 @@ aside {
   .nav-ul-li {
    width: 20%;
    padding: 10px 25px;
-   font-size: 1.5vw;
+   font-size: 1.3vw;
   }
 
   .div-other-op {
@@ -142,21 +142,21 @@ aside {
 
 @media screen and (min-width: 768px) {
   .nav-ul-li {
-    width: 20%;
     padding: 15px 40px;
   }
   
   .div-other-op {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .a-info {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .nav-ul-li {
+    width: 40%;
     -webkit-text-stroke: 0px;
    }
 }
