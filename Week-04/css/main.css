@@ -281,6 +281,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .line-section {
+    width: 90%;
+    margin: 10px auto;
+    border: 2px solid #373867;
+  }
+
   .section-one-title {
     text-align: start;
   }
@@ -306,9 +312,21 @@
     margin: 20px;
   }
 
+  .section-three {
+    align-items: start;
+    padding: 10px 60px;
+}
+  .form {
+    width: 50%;
+  }
+
   .section-five {
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
+  }
+
+  .textarea {
+    width: 200px;
   }
 }
