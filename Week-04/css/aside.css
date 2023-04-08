@@ -109,10 +109,11 @@ aside {
     display: flex;
   }
 
-  .nav-ul-li{
-    width: 0;
+  .nav-ul-li {
+    width: 5%;
     height: 0px;
     -webkit-text-stroke: 0.5px yellowgreen;
+    border: none;
     font-size: 15px;
   }
 

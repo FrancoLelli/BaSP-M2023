@@ -197,7 +197,7 @@
 }
 
 .section-five-title {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .img-with-text {
@@ -211,6 +211,12 @@
   height: 30px;
   margin: 0px 20px;
   vertical-align: middle;
+}
+
+.section-five-img2 {
+  width: 20px;
+  height: 20px;
+  margin: 0px 10px;
 }
 
 .sec-five-li{
@@ -228,6 +234,12 @@
 }
 
 @media all and (min-width: 480px) {
+
+  .section-five-img2 {
+    width: 25px;
+    height: 25px;
+  }
+
 }
 /*
 
