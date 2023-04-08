@@ -8,7 +8,7 @@ aside {
   font-weight: bold;
 }
 
-.div-other-op, .nav-logo-desktop {
+.div-other-op, .nav-logo-desktop, .nav-ul-li:nth-child(4) {
   display: none;
 }
 
@@ -25,11 +25,6 @@ aside {
   padding: 20px;
   align-self: start;
   cursor: pointer;
-}
-
-
-.nav-ul-li:nth-child(4) {
-  display: none;
 }
 
 .nav-ul-li {
@@ -83,15 +78,16 @@ aside {
   height: 21px;
 }
 
-@media all and (min-width: 480px) {
+@media screen and (min-width: 480px) {
   aside {
-    display: block;
-    width: 25%;
+    display: flex;
+    width: 20%;
     background-color: #AACE9B;
   }
 
   .aside-div {
     justify-content: space-around;
+    width: 100%;
   }
 
   .nav {
@@ -110,11 +106,9 @@ aside {
   }
 
   .nav-ul-li {
-    width: 10%;
-    height: 0px;
-    -webkit-text-stroke: 0.5px yellowgreen;
-    border: none;
-    font-size: 15px;
+   width: 20%;
+   padding: 10px 25px;
+   font-size: 1.5vw;
   }
 
   .div-other-op {
@@ -146,7 +140,12 @@ aside {
 
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .nav-ul-li {
+    width: 20%;
+    padding: 15px 40px;
+  }
+  
   .div-other-op {
     font-size: 1rem;
   }

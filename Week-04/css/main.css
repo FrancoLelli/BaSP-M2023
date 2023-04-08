@@ -279,3 +279,30 @@
     height: 46px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .section-one-title {
+    text-align: start;
+  }
+
+  .section-one-div {
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .section-one-div p {
+    font-size: 1.5rem;
+  }
+
+  .section-one-img {
+    width: 50%;
+  }
+
+  .div-list {
+    flex-direction: row;
+  }
+
+  .sec-two-list-type {
+    margin: 20px;
+  }
+}
