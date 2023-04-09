@@ -49,7 +49,7 @@ aside {
 .a-info-img {
   width: 30px;
   height: 30px;
-  margin: 5px 0px;
+  margin: 5px 0;
 }
 
 .aside-div-phone {
@@ -70,7 +70,7 @@ aside {
 }
 
 .aside-logos a {
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 
 .aside-logos-img {
@@ -117,11 +117,11 @@ aside {
   }
 
   .aside-other-op-ul {
-    margin: 15px 0px;
+    margin: 15px 0;
   }
 
   .aside-other-op-ul li {
-    margin: 10px 0px;
+    margin: 10px 0;
   }
 
   .a-info {
@@ -131,8 +131,13 @@ aside {
   .a-info-img {
     width: 20px;
     height: 20px;
-    margin: 5px 0px;
-}
+    margin: 5px 0;
+  }
+
+  .ul-info {
+    padding: 5px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
   .img-hamburger, .aside-logos, .aside-div-phone {
     display: none;
@@ -158,6 +163,6 @@ aside {
   .nav-ul-li {
     width: 40%;
     border: 1px solid #373867;
-    -webkit-text-stroke: 0px;
+    -webkit-text-stroke: 0;
    }
 }

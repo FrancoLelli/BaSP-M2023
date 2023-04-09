@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>MegaRocket SA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to CSS Reset -->
     <link rel="stylesheet" href="./css/reset.css">
@@ -23,8 +25,8 @@
                     <li class="nav-ul-li bg-white"><a class="li-a letter-blue" href="#">SIGN UP</a></li>
                     <li class="nav-ul-li bg-white"><a class="li-a letter-blue" href="#">LOG IN</a></li>
                     <li class="nav-ul-li bg-white"><a class="li-a letter-blue" href="#">CONTACT</a></li>
+                </ul>
             </nav>
-            </ul>
             <div class="div-other-op">
                 <h2 class="aside-other-op letter-blue">OTHER OPTIONS</h2>
                 <ul class="aside-other-op-ul">
@@ -132,40 +134,40 @@
                     <img src="./img/mail.png" alt="email logo">
                 </div>
                 <form class="form">
-                    <label class="label letter-blue" for="name">
+                    <label class="label letter-blue">
                         Name 
-                        <input id="name" class="input-form" type="text" placeholder="Insert your name">
+                        <input class="input-form" type="text" placeholder="Insert your name">
                     </label>
-                    <label class="label letter-blue"  for="surname">
+                    <label class="label letter-blue">
                         Surname
-                        <input id="surname" class="input-form" type="text" placeholder="Insert your surname">
+                        <input class="input-form" type="text" placeholder="Insert your surname">
                     </label>
-                    <label class="label letter-blue"  for="email">
+                    <label class="label letter-blue">
                         Email
-                        <input id="email" class="input-form" type="email" placeholder="Insert your e-mail">
+                        <input class="input-form" type="email" placeholder="Insert your e-mail">
                     </label>   
                     <div class="section-three-form-div">
                         <h3 class="form-subtitles letter-blue">Reason for contact: </h3>
                         <label class="form-div-label letter-blue"  for="option1">
-                            <input id="option1" type="radio" name="reason-contact" value="suggestion"> 
+                            <input type="radio" name="reason-contact" value="suggestion"> 
                             I want to make a query or suggestion
                         </label>    
                         <label class="form-div-label letter-blue"  for="option2">
-                            <input id="option2" type="radio" name="reason-contact" value="claim"> 
+                            <input type="radio" name="reason-contact" value="claim"> 
                             I want to make a claim
                         </label>    
                         <label class="form-div-label letter-blue"  for="option3">
-                            <input id="option3" type="radio" name="reason-contact" value="membership-cost"> 
+                            <input type="radio" name="reason-contact" value="membership-cost"> 
                             I want to know the memberships and costs
                         </label>
                     </div>        
-                    <label for="message" class="form-message letter-blue">
+                    <label class="form-message letter-blue">
                         Message
-                        <textarea id="message" class="textarea" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        <textarea class="textarea" cols="30" rows="10" placeholder="Type your message here"></textarea>
                     </label>
                     <div>
                         <button class="form-btn letter-blue bg-green" type="submit">Send message</button>
-                        <button class="form-btn letter-blue bg-white" type="reset">Reset</button>
+                        <button class="form-btn form-btn-reset letter-blue" type="reset">Reset</button>
                     </div>
                 </form>
             </section>
@@ -174,9 +176,11 @@
                 <h2 class="section-three-title letter-blue">OUR HISTORY</h2>
                 <div class="section-four-div">
                     <p class="section-three-p letter-white">
-                        Quisque pellentesque lacus metus, sodales tempor leo tincidunt ut. Curabitur quis elit ut lectus vehicula rutrum eu at sem. Nam eget 
-                        quam mi. Donec gravida metus ante, eget vulputate nibh posuere nec. Donec iaculis consequat neque at vulputate. Nulla tincidunt diam 
-                        justo, eget facilisis nibh porttitor id. Suspendisse rhoncus elit non dapibus ullamcorper. Proin in tempor quam. Nulla in eros est.
+                        Quisque pellentesque lacus metus, sodales tempor leo tincidunt ut. Curabitur quis elit ut lectu
+                        s vehicula rutrum eu at sem. Nam eget quam mi. Donec gravida metus ante, eget vulputate nibh po
+                        suere nec. Donec iaculis consequat neque at vulputate. Nulla tincidunt diam justo, eget facilis
+                        is nibh porttitor id. Suspendisse rhoncus elit non dapibus ullamcorper. Proin in tempor quam. N
+                        ulla in eros est.
                     </p>
                 </div>
             </section>
@@ -186,15 +190,15 @@
                     <h2 class="section-five-title letter-blue">ACTIVITIES</h2>
                     <ul class="section-five-ul letter-blue">
                         <li class="img-with-text">
-                            <img class="img" src="./img/pesas.png" alt="gym weights">
+                            <img class="img" src="./img/olympic-bar.png" alt="gym weights">
                             Crossfit
                         </li>
                         <li class="img-with-text">
-                            <img class="img" src="./img/brazo-gym.png" alt="arm">
+                            <img class="img" src="./img/arm-gym.png" alt="arm">
                             Fitness
                         </li>
                         <li class="img-with-text">
-                            <img class="img" src="./img/bici-gym.png" alt="bike">
+                            <img class="img" src="./img/bike-gym.png" alt="bike">
                             Spinning
                         </li>
                         <li class="img-with-text">
@@ -202,7 +206,7 @@
                             Functional
                         </li>
                         <li class="img-with-text">
-                            <img class="img" src="./img/guante-gym.png" alt="boxing glove">
+                            <img class="img" src="./img/box-gym.png" alt="boxing glove">
                             Box
                         </li>
                     </ul>
@@ -211,32 +215,38 @@
                     <h2>MEMBERSHIP TYPES</h2>
                     <ul class="section-five-ul">
                         <li class="sec-five-li">
-                            <img class="section-five-img2" src="./img/escudo.png" alt="shield">
-                            <ul class="sec-five-ul">
-                                <h3 class="ul-title">Black membership</h3>
-                                <li>-Free access to the weight room</li>
-                                <li>-Free acces to classes prior</li>
-                                <li>-Registration</li>
-                                <li>-Personalized monitoring by coach</li>
-                                <li>-Grid display</li>
-                            </ul>
+                            <h3 class="ul-title">Black membership</h3>
+                            <div class="list-memberships-types">
+                                <img class="section-five-img2" src="./img/shield.png" alt="shield">
+                                <ul class="sec-five-ul">
+                                    <li>-Free access to the weight room</li>
+                                    <li>-Free acces to classes prior</li>
+                                    <li>-Registration</li>
+                                    <li>-Personalized monitoring by coach</li>
+                                    <li>-Grid display</li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="sec-five-li">
-                            <img class="section-five-img2" src="./img/thunder.png" alt="thunderbolt">
-                            <ul class="sec-five-ul">
-                                <h3 class="ul-title">Classic membership</h3>
-                                <li>-Free access to the weight room</li>
-                                <li>-Personalized monitoring by a coach</li>
-                                <li>-Grid display</li>
-                            </ul>
+                            <h3 class="ul-title">Classic membership</h3>
+                            <div class="list-memberships-types">
+                                <img class="section-five-img2" src="./img/thunder.png" alt="thunderbolt">
+                                <ul class="sec-five-ul">
+                                    <li>-Free access to the weight room</li>
+                                    <li>-Personalized monitoring by a coach</li>
+                                    <li>-Grid display</li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="sec-five-li">
-                            <img class="section-five-img2" src="./img/corazon.png" alt="heart">
-                            <ul class="sec-five-ul">
-                                <h3 class="ul-title">Only classes membership</h3>
-                                <li>-Free access to the weight room</li>
-                                <li>-Grid display</li>
-                            </ul>
+                            <h3 class="ul-title">Only classes membership</h3>
+                            <div class="list-memberships-types">
+                                <img class="section-five-img2" src="./img/heart.png" alt="heart">
+                                <ul class="sec-five-ul">
+                                    <li>-Free access to the weight room</li>
+                                    <li>-Grid display</li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
