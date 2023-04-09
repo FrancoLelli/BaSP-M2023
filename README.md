@@ -13,7 +13,7 @@ We add css to the landing page
 
 ## Week 04
 [GitHub Pages](https://francolelli.github.io/BaSP-M2023/Week-04/index.html)
-we make the landing responsive
+We make the landing responsive
 
 ## Authors
 - Franco Gaston Lelli
