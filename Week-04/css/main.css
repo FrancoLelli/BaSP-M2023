@@ -170,7 +170,8 @@
   height: 90%;
   width: 100%;
   border-radius: 10px;
-  background-image: url("../img/background2-img-gym.png");  background-position: center;
+  background-image: url("../img/background2-img-gym-blur.png");  
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -190,7 +191,6 @@
 .section-five-div {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 20px 0;
   font-size: 15px;
@@ -241,6 +241,9 @@
 }
 
 @media all and (min-width: 480px) {
+  .section-one-div p{
+    text-shadow: none;
+  }
 
   .section-four {
     font-size: 1.5rem;
@@ -250,8 +253,14 @@
     font-size: 1.5rem;
   }
 
-  .section-one-div p{
-    text-shadow: none;
+  .section-five-ul-activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 245px;
+    width: 80%;
   }
 
   .img-with-text {
@@ -289,6 +298,12 @@
   .section-three-p {
     font-size: 1.3rem;
   }
+
+  .section-five-ul-activities {
+    flex-wrap: nowrap;
+    height: initial;
+  }
+
 
   .img {
     width: 65px;
@@ -337,18 +352,22 @@
   .section-three {
     align-items: start;
     padding: 10px 60px;
-}
-  .form {
-    width:40%;
   }
-  
-  .textarea {
-    width: 693px;
-    height: 199px;
+
+  .form {
+    width:80%;
+  }
+
+  .label {
+    width: 50%;
   }
 
   .section-three-title {
     align-self: flex-start;
+  }
+
+  .section-four-div {
+    background-image: url("../img/background2-img-gym-no_blur.png");  
   }
 
   .section-four {

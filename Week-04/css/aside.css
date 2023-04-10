@@ -38,7 +38,7 @@ aside {
   border: 1px solid green;
   border-radius: 5px;
   text-align: center;
-  -webkit-text-stroke: 1px yellowgreen;
+  -webkit-text-stroke: 0.5px yellowgreen;
 }
 
 .a-info {
