@@ -8,7 +8,9 @@ aside {
   font-weight: bold;
 }
 
-.div-other-op, .nav-logo-desktop, .nav-ul-li:nth-child(4) {
+.div-other-op,
+.nav-logo-desktop,
+.aside-nav-ul-li:nth-child(4) {
   display: none;
 }
 
@@ -27,7 +29,7 @@ aside {
   cursor: pointer;
 }
 
-.nav-ul-li {
+.aside-nav-ul-li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,6 +45,7 @@ aside {
 .a-info {
   display: flex;
   align-items: center;
+  color: #373867;
 }
 
 .a-info-img {
@@ -100,14 +103,14 @@ aside {
     width: 50px;
   }
 
-  .nav-ul-li:nth-child(4) {
+  .aside-nav-ul-li:nth-child(4) {
     display: flex;
   }
 
-  .nav-ul-li {
-   width: 20%;
-   padding: 10px 25px;
-   font-size: 1.3vw;
+  .aside-nav-ul-li {
+    width: 20%;
+    padding: 10px 25px;
+    font-size: 1.3vw;
   }
 
   .div-other-op {
@@ -133,22 +136,23 @@ aside {
     margin: 5px 0;
   }
 
-  .ul-info {
+  .aside-ul-info {
     padding: 5px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .img-hamburger, .aside-logos, .aside-div-phone {
+  .img-hamburger,
+  .aside-logos,
+  .aside-div-phone {
     display: none;
   }
-
 }
 
 @media screen and (min-width: 768px) {
-  .nav-ul-li {
+  .aside-nav-ul-li {
     padding: 15px 40px;
   }
-  
+
   .div-other-op {
     font-size: 0.8rem;
   }
@@ -159,9 +163,9 @@ aside {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-ul-li {
+  .aside-nav-ul-li {
     width: 40%;
     border: 1px solid #373867;
     -webkit-text-stroke: 0;
-   }
+  }
 }
