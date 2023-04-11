@@ -7,7 +7,7 @@
 
 .footer-text {
   width: 80%;
-  font-size: 10px;
+  font-size: 0.6rem;
 }
 
 .footer-img {
@@ -23,5 +23,11 @@
   .footer-img {
     width: 39px;
     height: 33px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-text {
+    font-size: 1rem;
   }
 }
