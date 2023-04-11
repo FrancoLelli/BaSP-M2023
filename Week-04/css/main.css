@@ -7,9 +7,9 @@
 .section-reason-title {
   margin: 30px 0;
   width: 90%;
-  font-size: 1.25rem;
-  font-weight: bold;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .section-reason-div {
@@ -142,10 +142,10 @@
 }
 
 .form-btn {
-  font-size: 1rem;
   padding: 10px;
   border-radius: 10px;
   border: none;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -159,10 +159,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 100vh;
+  padding: 15px 0;
+  text-align: center;
   font-size: 1.25rem;
   font-weight: bold;
-  text-align: center;
-  padding: 15px 0;
 }
 
 .section-our_history-div {
@@ -181,10 +181,10 @@
   align-items: center;
   height: 100%;
   padding: 0 50px;
-  font-size: 0.9rem;
-  text-align: justify;
-  line-height: 20px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  font-size: 0.9rem;
+  line-height: 20px;
 }
 
 .section-act_member-div {
@@ -258,8 +258,8 @@
     justify-content: start;
     align-items: start;
     flex-wrap: wrap;
-    height: 245px;
     width: 80%;
+    height: 245px;
   }
 
   .img-with-text {
@@ -328,7 +328,7 @@
   }
 
   .section-reason-div p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .section-reason-img {
@@ -341,6 +341,7 @@
 
   .sec-help-list-type {
     margin: 20px;
+    gap: 5rem;
   }
 
   .sec-help-list-type li:hover {
