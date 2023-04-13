@@ -18,5 +18,10 @@ We add css to the landing page
 
 We make the landing responsive. In mobile, you will have to remove the display: none in the aside to be able to view it
 
+## Week 05
+[GitHub Pages](https://francolelli.github.io/BaSP-M2023/Week-05/index.html)
+
+We solved exercises in Javascript
+
 ## Authors
 - Franco Gaston Lelli
