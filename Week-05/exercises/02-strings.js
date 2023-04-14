@@ -4,7 +4,7 @@ console.log("-------------------------EXERCISE 2 : STRINGS----------------------
 (utilizar toUpperCase).*/
 
 console.log("-Exercise 2.a");
-var textOne = "Vulnerabilidad";
+var textOne = "Communication";
 var result = textOne.toUpperCase();
 console.log(result);
 
@@ -12,7 +12,7 @@ console.log(result);
 guardando el resultado en una nueva variable (utilizar substring).*/
 
 console.log("-Exercise 2.b");
-var textTwo = "Inconscientemente";
+var textTwo = "Exaggeration";
 var result = textTwo.substring(0, 5);
 console.log(result);
 
@@ -20,7 +20,7 @@ console.log(result);
 guardando el resultado en una nueva variable (utilizar substring).*/
 
 console.log("-Exercise 2.c");
-var textThree = "Irresponsablemente";
+var textThree = "Organization";
 var result = textThree.substring(textThree.length - 3);
 console.log(result);
 
@@ -29,7 +29,7 @@ en mayúscula y las demás en minúscula. Guardar el resultado en una nueva vari
 toLowerCase y el operador +). */
 
 console.log("-Exercise 2.d");
-var textFour = "desarrollamiento";
+var textFour = "collaboration";
 var result = textFour.substring(0, 1).toUpperCase() + textFour.substring(1).toLowerCase();
 console.log(result);
 
@@ -37,7 +37,7 @@ console.log(result);
 del primer espacio en blanco y guardarla en una variable (utilizar indexOf).*/
 
 console.log("-Exercise 2.e");
-var textFive = "Lionel Messi salio campeon del mundo";
+var textFive = "Lionel Messi is world champion";
 var result = textFive.indexOf(" ");
 console.log(result);
 
@@ -47,7 +47,7 @@ palabras en mayúscula y las demás letras en minúscula (utilizar indexOf, subs
 y el operador +).*/
 
 console.log("-Exercise 2.f");
-var textSix = "desaGRAdable cAStellanos";
+var textSix = "congRAtulations cAStellanos";
 var wordOne =
   textSix.substring(0, 1).toUpperCase() +
   textSix.substring(1, textSix.indexOf(" ")).toLowerCase();

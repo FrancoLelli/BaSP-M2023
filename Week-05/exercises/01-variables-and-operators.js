@@ -21,7 +21,6 @@ console.log(result);
 guardando el resultado de la suma en una 3er variable (utilizar length).*/
 
 console.log("-Exercise 1.c");
-
 var wordThree = "Independiente";
 var wordFour = "Racing";
 var result = wordThree.length + wordFour.length;
