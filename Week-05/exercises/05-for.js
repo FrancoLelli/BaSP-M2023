@@ -27,7 +27,7 @@ console.log("-Exercise 5.c");
 var sentence = "";
 for (var i = 0; i < words.length; i++) {
   var word = words[i];
-  sentence += word + " ";
+  sentence += word;
 }
 alert(sentence);
 

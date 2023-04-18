@@ -4,7 +4,7 @@ console.log("-------------------------EXERCISE 6 : FUNCTIONS--------------------
 la función y guardar el resultado en una variable, mostrando el valor de dicha variable en la consola del navegador.*/
 
 console.log("-Exercise 6.a");
-function sumNumbers(numberOne, numberTwo) {
+var sumNumbers = function (numberOne, numberTwo) {
   return numberOne + numberTwo;
 }
 
@@ -16,7 +16,7 @@ es un número; de no ser un número, mostrar un alert aclarando que uno de los p
 el valor NaN como resultado.*/
 
 console.log("-Exercise 6.b");
-function sumNumbersValid(numberOne, numberTwo) {
+var sumNumbersValid = function (numberOne, numberTwo) {
   if (typeof numberOne !== "number" || typeof numberTwo !== "number") {
     alert("Wrong parameters");
     return NaN;
@@ -31,7 +31,7 @@ console.log(result);
 devuelva verdadero si es un número entero.*/
 
 console.log("-Exercise 6.c");
-function validateInteger(number) {
+var validateInteger = function (number) {
   return number % 1 == 0;
 }
 
@@ -43,7 +43,7 @@ que valide que los números sean enteros. En caso que haya decimales mostrar un 
 número convertido a entero (redondeado).*/
 
 console.log("-Exercise 6.d");
-function sumNumbersInteger(numberOne, numberTwo) {
+var sumNumbersInteger = function (numberOne, numberTwo) {
   if (typeof numberOne !== "number" || typeof numberTwo !== "number") {
     alert("Wrong parameters");
     return NaN;
@@ -66,7 +66,7 @@ console.log(result);
 probando que todo siga funcionando igual que en el apartado anterior.*/
 
 console.log("-Exercise 6.e");
-function validNumbers(numberOne, numberTwo) {
+var validNumbers = function (numberOne, numberTwo) {
   if (typeof numberOne !== "number" || typeof numberTwo !== "number") {
     alert("Wrong parameters");
     return NaN;
@@ -82,7 +82,7 @@ function validNumbers(numberOne, numberTwo) {
   return true;
 }
 
-function sumOrReturnValidation(numberOne, numberTwo) {
+var sumOrReturnValidation = function (numberOne, numberTwo) {
   var returnValidation = validNumbers(numberOne, numberTwo);
   if (returnValidation === true) {
     return numberOne + numberTwo;
