@@ -1,0 +1,36 @@
+.header-logo {
+  display: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.header-title {
+  margin: 0 18px;
+  color: #AACE9B;
+}
+
+@media only screen and (min-width: 480px) {
+  header {
+    padding: 30px;
+  }
+
+  .header-logo {
+    display: block;
+    width: 150px;
+  }
+
+  .header-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-title {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,393 @@
+.section-reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-reason-title {
+  margin: 30px 0;
+  width: 90%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.section-reason-div {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0 0 5rem 0;
+}
+
+.section-reason-img {
+  width: 100%;
+}
+
+.section-reason-div p {
+  width: 80%;
+  margin: 20px 0;
+  color: #373867;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section-help {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("../../assets/imgs/background-img-gym.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-help-title {
+  margin: 5rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.sec-help-list-type {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.div-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 5rem 0;
+}
+
+.sec-help-list-type li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid #373867;
+  border-radius: 3px;
+}
+
+.help-types {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.section-contact-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 1.8rem;
+}
+
+.section-contact-div img {
+  margin: 0 10px;
+  width: 30px;
+}
+
+.form {
+  width: 80%;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.input-form {
+  height: 10px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.form-subtitles {
+  margin: 20px 0;
+}
+
+.form-div-label {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+
+.form-message {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.textarea {
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.form-btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-btn-reset {
+  background-color: white;
+  border: 1px solid #373867;
+}
+
+.section-our-history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.section-our-history-div {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+  background-image: url("../../assets/imgs/background2-img-gym-blur.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-our-history-title {
+  margin: 2rem 0;
+}
+
+.section-our-history-p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 10rem 3.5rem;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: justify;
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+.section-act_member-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.section-act_member-title {
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.img-with-text {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.img {
+  width: 40px;
+  height: 30px;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.section-five-img2 {
+  width: 20px;
+  height: 20px;
+  margin: 0 15px;
+}
+
+.sec-five-li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.list-memberships-types {
+  display: flex;
+  align-items: center;
+}
+
+.ul-title {
+  margin: 10px 0;
+}
+
+.sec-five-ul li {
+  font-size: 0.6rem;
+}
+
+@media all and (min-width: 480px) {
+  .section-reason-div p {
+    text-shadow: none;
+  }
+
+  .section-our-history {
+    font-size: 1.5rem;
+  }
+
+  .section-our-history-p{
+    margin: 10rem 3.5rem;
+  }
+
+  .section-act_member-title {
+    font-size: 1.5rem;
+  }
+
+  .section-five-ul-activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 245px;
+  }
+
+  .img-with-text {
+    font-size: 1.3rem;
+  }
+
+  .section-five-img2 {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sec-five-ul li {
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .section-reason-div p {
+    font-size: 1.3rem;
+  }
+
+  .section-reason-title {
+    font-size: 2rem;
+  }
+
+  .sec-help-list-type li {
+    height: 80px;
+  }
+
+  .form {
+    font-size: 1.3rem;
+  }
+
+  .section-our-history-p {
+    margin: 10rem 7rem;
+    font-size: 1.3rem;
+  }
+
+  .section-five-ul-activities {
+    flex-wrap: wrap;
+    align-content: center;
+    height: 300px;
+  }
+
+  .img {
+    width: 65px;
+    height: 46px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .line-section {
+    width: 90%;
+    margin: 10px auto;
+    border: 2px solid #373867;
+  }
+
+  .section-reason-title {
+    text-align: start;
+  }
+
+  .section-reason-div {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .section-reason-div p {
+    font-size: 1.5rem;
+  }
+
+  .section-reason-img {
+    width: 50%;
+  }
+
+  .div-list {
+    flex-direction: row;
+  }
+
+  .sec-help-list-type {
+    margin: 20px;
+    gap: 5rem;
+  }
+
+  .sec-help-list-type li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .section-contact {
+    align-items: start;
+    padding: 10px 60px;
+  }
+
+  .section-our-history-p{
+    margin: 13rem 10rem;
+    line-height: 30px;
+  }
+
+  .label {
+    width: 50%;
+  }
+
+  .section-our-history-title {
+    align-self: flex-start;
+  }
+
+  .section-our-history-div {
+    background-image: url("../../assets/imgs/background2-img-gym-no_blur.png");
+  }
+
+  .section-our-history {
+    padding: 20px;
+  }
+
+  .section-activities {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  .section-five-ul-activities {
+    align-items: start;
+    height: initial;
+  }
+}
