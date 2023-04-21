@@ -1,0 +1,127 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.image-desktop {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-rocket {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.arrow-back-div {
+    align-self: start;
+    padding: 10px;
+}
+
+.form-input-group {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #373867;
+}
+
+.inputs {
+    margin: 10px 0;
+    height: 20px;
+    width: 80%;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.keep-forgot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.keep-text {
+    margin: 10px 0;
+}
+
+.button-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    margin: 10px auto;
+    background: rgba(54, 54, 54, 0.26);
+    border-radius: 5px;
+    border: 1px solid #373867;
+    color: #373867;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prees-here {
+    font-weight: bold;
+    text-decoration: none;
+    color: #373867;
+}
+
+@media screen and (min-width: 480px) {
+    .logo-rocket-img {
+        width: 120px;
+    }
+
+    .form-input-group {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        flex-direction: row;
+    }
+
+    .logo-rocket-img {
+        width: 200px;
+    }
+
+    .arrow-back-div {
+        position: absolute;
+        top: 0;
+    }
+
+    .image-desktop-img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .image-desktop {
+        display: flex;
+        width: 100%;
+    }
+
+    .inputs {
+        height: 2rem;
+        width: 200px;
+    }
+
+    .keep-forgot {
+        flex-direction: row;
+    }
+
+    .keep-text {
+        margin: 10px 5px;
+    }
+
+}
