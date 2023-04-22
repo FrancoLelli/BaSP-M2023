@@ -7,7 +7,7 @@
     <title>MegaRocket SA - Login</title>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/login.css" />
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js" defer></script>
   </head>
   <body>
     <div class="arrow-back-div">
@@ -28,7 +28,7 @@
       </div>
       <form>
         <div class="form-input-group">
-          <label for="email">Email</label>
+          <label id="emailText" for="email">Email</label>
           <div>
             <img src="../../assets/imgs/user-form.png" alt="user icon" />
             <input
@@ -38,10 +38,11 @@
               type="text"
               placeholder="Email"
             />
+            <label id="errorEmail" class="error">Email incorrecto</label>
           </div>
         </div>
         <div class="form-input-group">
-          <label for="password">Password</label>
+          <label id="passwordText" for="password">Password</label>
           <div>
             <img
               src="../../assets/imgs/password-form.png"
@@ -54,6 +55,7 @@
               type="password"
               placeholder="Password"
             />
+            <label id="errorPassword" class="error">Contraseña incorrecta</label>
           </div>
         </div>
         <div class="keep-forgot">
@@ -63,7 +65,7 @@
           </label>
           <a href="#">Forgot password?</a>
         </div>
-        <button class="button-login" type="submit">Login</button>
+        <button id="btn-login" class="button-login" type="submit">Login</button>
       </form>
       <div>
         <p class="new-user">
