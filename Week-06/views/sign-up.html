@@ -1,17 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MegaRocket SA - Sign Up</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/sign-up.css">
-    <script src="../js/sign-up.js"></script>
-</head>
-<body>
-    <div>
-        hola sign
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <script src="../js/sign-up.js" defer></script>
+  </head>
+  <body>
+    <div class="container-sign-up">
+      <div class="arroy-back">
+        <a href="./index.html">
+          <img
+            class="arrow-img"
+            src="../../assets/imgs/arrow-back.png"
+            alt="arrow back"
+          />
+        </a>
+      </div>
+      <div>
+        <img
+          class="logo-rocket"
+          src="../../assets/imgs/logo-rocket-desktop.jpg"
+          alt="logo rocket"
+        />
+      </div>
+      <div class="container-form">
+        <form class="form">
+          <div class="group-input">
+            <label id="nameText" for="name">
+              Name
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="nameInput"
+              name="name"
+              type="text"
+              placeholder="Name"
+            />
+            <label id="nameError" class="error">Wrong Name</label>
+          </div>
+          <div class="group-input">
+            <label id="surnameText" for="surname">
+              Surname
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="surnameInput"
+              name="surname"
+              type="text"
+              placeholder="Surname"
+            />
+            <label id="surnameError" class="error">Wrong Surname</label>
+          </div>
+          <div class="group-input">
+            <label for="dni">
+              DNI
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="dniInput"
+              name="dni"
+              type="text"
+              placeholder="DNI"
+            />
+          </div>
+          <div class="group-input">
+            <label for="birthday">
+              Birthday
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="birthdayInput"
+              name="birthday"
+              type="date"
+            />
+          </div>
+          <div class="group-input">
+            <label for="phone">
+              Phone
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="phoneInput"
+              name="phone"
+              type="text"
+              placeholder="Phone"
+            />
+          </div>
+          <div class="group-input">
+            <label for="adress">
+              Adress
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="adressInput"
+              name="adress"
+              type="text"
+              placeholder="Adress"
+            />
+          </div>
+          <div class="group-input">
+            <label for="city">
+              City
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="cityInput"
+              name="city"
+              type="text"
+              placeholder="City"
+            />
+          </div>
+          <div class="group-input">
+            <label for="zipCode">
+              Zip Code
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="zipCode"
+              name="zipCode"
+              type="text"
+              placeholder="Zip Code"
+            />
+          </div>
+          <div class="group-input">
+            <label for="email">
+              Email
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="emailInput"
+              name="email"
+              type="text"
+              placeholder="Email"
+            />
+            <label id="errorEmail" class="error">Wrong Email</label>
+          </div>
+          <div class="group-input">
+            <label for="password">
+              Password
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="passwordInput"
+              name="password"
+              type="text"
+              placeholder="Password"
+            />
+            <label id="errorPassword" class="error">Wrong Password</label>
+          </div>
+          <div class="group-input">
+            <label for="passwordRepeat">
+              Repeat Password
+              <img
+                class="icon-help"
+                src="../../assets/imgs/icon-help-form.png"
+                alt="help icon"
+              />
+            </label>
+            <input
+              class="inputs"
+              id="passwordRepeatInput"
+              name="passwordRepeat"
+              type="text"
+              placeholder="Repeat Password"
+            />
+            <label id="errorPassword" class="error">Wrong Password</label>
+          </div>
+          <div class="accept-terms">
+            <p class="accept-text">Accept terms and conditions?</p>
+            <input type="checkbox" id="acceptTerms" value="accept"/>
+          </div>
+          <button id="btnRegister" class="button-register" type="submit">Register</button>
+        </form>
+        <div class="have-account">
+          <p>Already have an account? <a class="link-to-login" href="./login.html">Press Here</a></p>
+        </div>
+      </div>
     </div>
-</body>
+    <div class="img-desktop">
+      <img
+        class="img-desktop-register"
+        src="../../assets/imgs/desktop-img-register.png"
+        alt=""
+      />
+    </div>
+  </body>
 </html>

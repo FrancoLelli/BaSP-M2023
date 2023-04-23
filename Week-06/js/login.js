@@ -86,8 +86,8 @@ var loginValidate = function (e) {
       alert(
         "Email: " + emailInput.value + " , Password: " + passwordInput.value
       );
-    }else {
-      alert("Campos incorrectos")
+    } else {
+      alert("Wrong Fields");
     }
   }
 };
