@@ -45,7 +45,7 @@
               type="text"
               placeholder="Name"
             />
-            <label id="nameError" class="error">Wrong Name</label>
+            <label id="nameError" class="label-none">Wrong Name</label>
           </div>
           <div class="group-input">
             <label id="surnameText" for="surname">
@@ -63,10 +63,10 @@
               type="text"
               placeholder="Surname"
             />
-            <label id="surnameError" class="error">Wrong Surname</label>
+            <label id="surnameError" class="label-none">Wrong Surname</label>
           </div>
           <div class="group-input">
-            <label for="dni">
+            <label id="dniText" for="dni">
               DNI
               <img
                 class="icon-help"
@@ -81,9 +81,10 @@
               type="text"
               placeholder="DNI"
             />
+            <label id="dniError" class="label-none"></label>
           </div>
           <div class="group-input">
-            <label for="birthday">
+            <label id="birthdayText" for="birthday">
               Birthday
               <img
                 class="icon-help"
@@ -97,9 +98,10 @@
               name="birthday"
               type="date"
             />
+            <label id="errorBirthday" class="label-none"></label>
           </div>
           <div class="group-input">
-            <label for="phone">
+            <label id="phoneText" for="phone">
               Phone
               <img
                 class="icon-help"
@@ -114,6 +116,7 @@
               type="text"
               placeholder="Phone"
             />
+            <label id="errorPhone" class="label-none"></label>
           </div>
           <div class="group-input">
             <label for="adress">
@@ -167,7 +170,7 @@
             />
           </div>
           <div class="group-input">
-            <label for="email">
+            <label id="emailText" for="email">
               Email
               <img
                 class="icon-help"
@@ -182,7 +185,7 @@
               type="text"
               placeholder="Email"
             />
-            <label id="errorEmail" class="error">Wrong Email</label>
+            <label id="errorEmail" class="label-none">Wrong Email</label>
           </div>
           <div class="group-input">
             <label for="password">
@@ -200,7 +203,7 @@
               type="text"
               placeholder="Password"
             />
-            <label id="errorPassword" class="error">Wrong Password</label>
+            <label id="errorPassword" class="label-none">Wrong Password</label>
           </div>
           <div class="group-input">
             <label for="passwordRepeat">
@@ -218,7 +221,7 @@
               type="text"
               placeholder="Repeat Password"
             />
-            <label id="errorPassword" class="error">Wrong Password</label>
+            <label id="errorPassword" class="label-none">Wrong Password</label>
           </div>
           <div class="accept-terms">
             <p class="accept-text">Accept terms and conditions?</p>
