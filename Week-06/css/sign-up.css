@@ -138,6 +138,6 @@ body {
     .form {
         display: flex;
         flex-flow: column wrap;
-        height: 35rem;
+        height: 40rem;
     }
 }

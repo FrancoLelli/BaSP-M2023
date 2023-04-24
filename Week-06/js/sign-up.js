@@ -18,22 +18,32 @@ var phoneText = document.getElementById("phoneText");
 var phoneInput = document.getElementById("phoneInput");
 var errorPhoneClass = document.getElementById("errorPhone");
 
+var adressText = document.getElementById("adressText");
 var adressInput = document.getElementById("adressInput");
+var errorAdressClass = document.getElementById("errorAdress");
 
+var cityText = document.getElementById("cityText");
 var cityInput = document.getElementById("cityInput");
+var errorCityClass = document.getElementById("errorCity");
 
-var zipCode = document.getElementById("zipCode");
+var zipCodeText = document.getElementById("zipCodeText");
+var zipCodeInput = document.getElementById("zipCode");
+var errorZipCodeClass = document.getElementById("errorZipCode");
 
 var emailText = document.getElementById("emailText");
 var emailInput = document.getElementById("emailInput");
 var errorEmailClass = document.getElementById("errorEmail");
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-var errorPasswordClass = document.getElementById("errorPassword");
-var passwordInput = document.getElementById("passwordInput");
 var passwordText = document.getElementById("passwordText");
+var passwordInput = document.getElementById("passwordInput");
+var errorPasswordClass = document.getElementById("errorPassword");
 
+var passwordRepeatText = document.getElementById("passwordRepeatText");
 var passwordRepeatInput = document.getElementById("passwordRepeatInput");
+var errorPasswordRepeatClass = document.getElementById(
+  "errorPasswordRepeatClass"
+);
 
 var btnRegister = document.getElementById("btnRegister");
 
@@ -145,7 +155,7 @@ var resetInputSurname = function () {
 };
 
 var validateDni = function () {
-  isNumber = false;
+  var isNumber = false;
   var dniValue = dniInput.value.trim();
   for (var i = 0; i < dniValue.length; i++) {
     var number = dniValue[i];
@@ -196,7 +206,7 @@ var resetInputDni = function () {
 };
 
 var validateBirthday = function () {
-  isValid = false;
+  var isValid = false;
   var dateSelected = birthdayInput.value;
   var dateToday = new Date().toISOString().slice(0, 10);
   if (dateSelected <= dateToday && dateSelected !== "") {
@@ -247,7 +257,7 @@ var resetInputBirthday = function () {
 };
 
 var validatePhone = function () {
-  isValid = false;
+  var isValid = false;
   var phoneValue = phoneInput.value;
   for (var i = 0; i < phoneValue.length; i++) {
     var number = phoneValue[i];
@@ -266,8 +276,8 @@ var validatePhone = function () {
 
   if (isValid) {
     if (phoneValue.length == 10) {
-        phoneInput.classList.add("validate-input");
-        return true
+      phoneInput.classList.add("validate-input");
+      return true;
     } else {
       phoneText.innerHTML = "Phone*";
       phoneText.classList.add("error-text");
@@ -297,6 +307,182 @@ var resetInputPhone = function () {
   errorPhoneClass.classList.add("label-none");
 };
 
+var validateAdress = function () {
+  var haveNumber = false;
+  var haveLetter = false;
+  var existSpace = false;
+  var haveSpace = 0;
+  var adressValue = adressInput.value.trim();
+  for (var i = 0; i < adressValue.length; i++) {
+    var char = adressValue[i];
+    if (char == " ") {
+      haveSpace += 1;
+    }
+    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+      haveLetter = true;
+    } else if (char >= "0" && char <= "9") {
+      haveNumber = true;
+    } else if (haveSpace >= 1) {
+      existSpace = true;
+    } else {
+      adressText.innerHTML = "Adress*";
+      adressText.classList.add("error-text");
+      adressInput.classList.add("error-input");
+      errorAdressClass.classList.add("error");
+      errorAdressClass.classList.remove("label-none");
+      errorAdressClass.innerHTML =
+        "Adress must have only numbers or letter and one space";
+      return false;
+    }
+  }
+
+  if (adressValue.length >= 5) {
+    if (haveLetter && haveNumber && existSpace) {
+      adressInput.classList.add("validate-input");
+      return true;
+    } else {
+      adressText.innerHTML = "Adress*";
+      adressText.classList.add("error-text");
+      adressInput.classList.add("error-input");
+      errorAdressClass.classList.add("error");
+      errorAdressClass.classList.remove("label-none");
+      errorAdressClass.innerHTML =
+        "Adress must have only numbers or letter and one space";
+      return false;
+    }
+  } else {
+    adressText.innerHTML = "Adress*";
+    adressText.classList.add("error-text");
+    adressInput.classList.add("error-input");
+    errorAdressClass.classList.add("error");
+    errorAdressClass.classList.remove("label-none");
+    errorAdressClass.innerHTML = "The field must at least 5 characters";
+    return false;
+  }
+};
+
+var resetInputAdress = function () {
+  adressText.innerHTML = "Adress";
+  adressText.classList.remove("error-text");
+  adressInput.classList.remove("validate-input");
+  adressInput.classList.remove("error-input");
+  errorAdressClass.classList.remove("error");
+  errorAdressClass.classList.add("label-none");
+};
+
+var validateCity = function () {
+  var isValid = false;
+  var countLetter = 0;
+  var cityValue = cityInput.value.trim();
+  for (var i = 0; i < cityValue.length; i++) {
+    var char = cityValue[i];
+    console.log(char);
+    if (
+      (char >= "a" && char <= "z") ||
+      (char >= "A" && char <= "Z") ||
+      (char >= "0" && char <= "9") ||
+      char == " "
+    ) {
+      if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+        countLetter++;
+      }
+      isValid = true;
+    } else {
+      cityText.innerHTML = "City*";
+      cityText.classList.add("error-text");
+      cityInput.classList.add("error-input");
+      errorCityClass.classList.add("error");
+      errorCityClass.classList.remove("label-none");
+      errorCityClass.innerHTML = "City must have only letter and numbers";
+      return false;
+    }
+  }
+
+  if (isValid) {
+    if (countLetter > 3) {
+      cityInput.classList.add("validate-input");
+      return true;
+    } else {
+      cityText.innerHTML = "City*";
+      cityText.classList.add("error-text");
+      cityInput.classList.add("error-input");
+      errorCityClass.classList.add("error");
+      errorCityClass.classList.remove("label-none");
+      errorCityClass.innerHTML =
+        "The field must have at least 4 or more letters";
+      return false;
+    }
+  } else {
+    cityText.innerHTML = "City*";
+    cityText.classList.add("error-text");
+    cityInput.classList.add("error-input");
+    errorCityClass.classList.add("error");
+    errorCityClass.classList.remove("label-none");
+    errorCityClass.innerHTML = "The field must not be empty";
+    return false;
+  }
+};
+
+var resetInputCity = function () {
+  cityText.innerHTML = "City";
+  cityText.classList.remove("error-text");
+  cityInput.classList.remove("validate-input");
+  cityInput.classList.remove("error-input");
+  errorCityClass.classList.remove("error");
+  errorCityClass.classList.add("label-none");
+};
+
+var validateZipCode = function () {
+  var isValid = false;
+  var zipCodeValue = zipCodeInput.value.trim();
+  for (var i = 0; i < zipCodeValue.length; i++) {
+    var number = zipCodeValue[i];
+    if (!isNaN(number)) {
+      isValid = true;
+    } else {
+      zipCodeText.innerHTML = "Zip Code*";
+      zipCodeText.classList.add("error-text");
+      zipCodeInput.classList.add("error-input");
+      errorZipCodeClass.classList.add("error");
+      errorZipCodeClass.classList.remove("label-none");
+      errorZipCodeClass.innerHTML = "Zip Code must have only numbers";
+      return false;
+    }
+  }
+
+  if (isValid) {
+    if (zipCodeValue.length >= 4 && zipCodeValue.length <= 5) {
+      zipCodeInput.classList.add("validate-input");
+      return true;
+    } else {
+      zipCodeText.innerHTML = "Zip Code*";
+      zipCodeText.classList.add("error-text");
+      zipCodeInput.classList.add("error-input");
+      errorZipCodeClass.classList.add("error");
+      errorZipCodeClass.classList.remove("label-none");
+      errorZipCodeClass.innerHTML = "Zip Code must have only 4 or 5 numbers";
+      return false;
+    }
+  } else {
+    zipCodeText.innerHTML = "Zip Code*";
+    zipCodeText.classList.add("error-text");
+    zipCodeInput.classList.add("error-input");
+    errorZipCodeClass.classList.add("error");
+    errorZipCodeClass.classList.remove("label-none");
+    errorZipCodeClass.innerHTML = "The field must not be empty";
+    return false;
+  }
+};
+
+var resetInputZipCode = function () {
+  zipCodeText.innerHTML = "Zip Code";
+  zipCodeText.classList.remove("error-text");
+  zipCodeInput.classList.remove("validate-input");
+  zipCodeInput.classList.remove("error-input");
+  errorZipCodeClass.classList.remove("error");
+  errorZipCodeClass.classList.add("label-none");
+};
+
 var validateEmail = function () {
   if (!emailExpression.test(emailInput.value.trim())) {
     emailText.innerHTML = "Email*";
@@ -320,6 +506,214 @@ var resetInputEmail = function () {
   errorEmailClass.classList.add("label-none");
 };
 
+var validatePassword = function () {
+  var letter = false;
+  var number = false;
+  for (var i = 0; i < passwordInput.value.length; i++) {
+    var charPassword = passwordInput.value[i];
+    if (charPassword >= "0" && charPassword <= "9") {
+      number = true;
+    } else if (
+      (charPassword >= "a" && charPassword <= "z") ||
+      (charPassword >= "A" && charPassword <= "Z")
+    ) {
+      letter = true;
+    } else {
+      passwordText.innerHTML = "Password*";
+      passwordText.classList.add("error-text");
+      passwordInput.classList.add("error-input");
+      errorPasswordClass.classList.add("error");
+      errorPasswordClass.classList.remove("label-none");
+      errorPasswordClass.innerHTML =
+        "Password must have only letter and numbers";
+      return false;
+    }
+  }
+  if (letter && number) {
+    if (passwordInput.value.length < 8) {
+      passwordText.innerHTML = "Password*";
+      passwordText.classList.add("error-text");
+      passwordInput.classList.add("error-input");
+      errorPasswordClass.classList.add("error");
+      errorPasswordClass.classList.remove("label-none");
+      errorPasswordClass.innerHTML = "Password must have at least 8 characters";
+      return false;
+    } else {
+      if (passwordInput.value === passwordRepeatInput.value) {
+        passwordInput.classList.add("validate-input");
+        return true;
+      } else {
+        passwordRepeatInput.value = "";
+        passwordInput.classList.add("validate-input");
+        passwordRepeatText.innerHTML = "Repeat Password*";
+        passwordRepeatText.classList.add("error-text");
+        passwordRepeatInput.classList.remove("validate-input");
+        passwordRepeatInput.classList.add("error-input");
+        errorPasswordRepeatClass.classList.add("error");
+        errorPasswordRepeatClass.classList.remove("label-none");
+        errorPasswordRepeatClass.innerHTML = "Passwords must match";
+        return false;
+      }
+    }
+  } else {
+    passwordText.innerHTML = "Password*";
+    passwordText.classList.add("error-text");
+    passwordInput.classList.add("error-input");
+    errorPasswordClass.classList.add("error");
+    errorPasswordClass.classList.remove("label-none");
+    errorPasswordClass.innerHTML = "Password must have only letter and numbers";
+    return false;
+  }
+};
+
+var resetInputPassword = function () {
+  passwordText.innerHTML = "Password";
+  passwordText.classList.remove("error-text");
+  passwordInput.classList.remove("validate-input");
+  passwordInput.classList.remove("error-input");
+  errorPasswordClass.classList.remove("error");
+  errorPasswordClass.classList.add("label-none");
+};
+
+var validateRepeatPassword = function () {
+  var letter = false;
+  var number = false;
+  for (var i = 0; i < passwordRepeatInput.value.length; i++) {
+    var charPassword = passwordRepeatInput.value[i];
+    if (charPassword >= "0" && charPassword <= "9") {
+      number = true;
+    } else if (
+      (charPassword >= "a" && charPassword <= "z") ||
+      (charPassword >= "A" && charPassword <= "Z")
+    ) {
+      letter = true;
+    } else {
+      passwordRepeatText.innerHTML = "Repeat Password*";
+      passwordRepeatText.classList.add("error-text");
+      passwordRepeatInput.classList.add("error-input");
+      errorPasswordRepeatClass.classList.add("error");
+      errorPasswordRepeatClass.classList.remove("label-none");
+      errorPasswordRepeatClass.innerHTML =
+        "Password must have only letter and numbers";
+      return false;
+    }
+  }
+  if (letter && number) {
+    if (passwordRepeatInput.value.length < 8) {
+      passwordRepeatText.innerHTML = "Repeat Password*";
+      passwordRepeatText.classList.add("error-text");
+      passwordRepeatInput.classList.add("error-input");
+      errorPasswordRepeatClass.classList.add("error");
+      errorPasswordRepeatClass.classList.remove("label-none");
+      errorPasswordRepeatClass.innerHTML =
+        "Password must have at least 8 characters";
+      return false;
+    } else {
+      if (passwordInput.value === passwordRepeatInput.value) {
+        passwordRepeatInput.classList.add("validate-input");
+        return true;
+      } else {
+        passwordInput.value = "";
+        passwordRepeatInput.classList.add("validate-input");
+        passwordInput.classList.remove("validate-input");
+        passwordText.innerHTML = "Password*";
+        passwordText.classList.add("error-text");
+        passwordInput.classList.add("error-input");
+        errorPasswordClass.classList.add("error");
+        errorPasswordClass.classList.remove("label-none");
+        errorPasswordClass.innerHTML = "Passwords must match";
+        return false;
+      }
+    }
+  } else {
+    passwordRepeatText.innerHTML = "Repeat Password*";
+    passwordRepeatText.classList.add("error-text");
+    passwordRepeatInput.classList.add("error-input");
+    errorPasswordRepeatClass.classList.add("error");
+    errorPasswordRepeatClass.classList.remove("label-none");
+    errorPasswordRepeatClass.innerHTML =
+      "Password must have only letter and numbers";
+    return false;
+  }
+};
+
+var resetInputRepeatPassword = function () {
+  passwordRepeatText.innerHTML = "Repeat Password";
+  passwordRepeatText.classList.remove("error-text");
+  passwordRepeatInput.classList.remove("validate-input");
+  passwordRepeatInput.classList.remove("error-input");
+  errorPasswordRepeatClass.classList.remove("error");
+  errorPasswordRepeatClass.classList.add("label-none");
+};
+
+var validateAllInformation = function () {
+  var array = [];
+  if (!validateName()) {
+    array.push("The field Name is wrong");
+  }
+  if (!validateSurname()) {
+    array.push("\nThe field Surname is wrong");
+  }
+  if (!validateDni()) {
+    array.push("\nThe field DNI is wrong");
+  }
+  if (!validateBirthday()) {
+    array.push("\nThe field Birthday is wrong");
+  }
+  if (!validatePhone()) {
+    array.push("\nThe field Phone is wrong");
+  }
+  if (!validateAdress()) {
+    array.push("\nThe field Adress is wrong");
+  }
+  if (!validateCity()) {
+    array.push("\nThe field City is wrong");
+  }
+  if (!validateZipCode()) {
+    array.push("\nThe field Zip Code is wrong");
+  }
+  if (!validateEmail()) {
+    array.push("\nThe field Email is wrong");
+  }
+  if (!validateRepeatPassword()) {
+    array.push("\nThe field Repeat Password is wrong");
+  }
+  if (!validatePassword()) {
+    array.push("\nThe field Password is wrong");
+  }
+  return array;
+};
+
+var registerValidate = function (e) {
+  e.preventDefault();
+  if (validateAllInformation() == "") {
+    alert(
+      "Name: " +
+        nameInput.value +
+        "\nSurname: " +
+        surnameInput.value +
+        "\nDNI: " +
+        dniInput.value +
+        "\nBirthday: " +
+        birthdayInput.value +
+        "\nPhone: " +
+        phoneInput.value +
+        "\nAdress: " +
+        adressInput.value +
+        "\nCity: " +
+        cityInput.value +
+        "\nZip Code: " +
+        zipCodeInput.value +
+        "\nEmail: " +
+        emailInput.value +
+        "\nPassword: " +
+        passwordInput.value
+    );
+  } else {
+    alert(validateAllInformation());
+  }
+};
+
 nameInput.addEventListener("blur", validateName);
 nameInput.addEventListener("focus", resetInputName);
 
@@ -335,42 +729,22 @@ birthdayInput.addEventListener("focus", resetInputBirthday);
 phoneInput.addEventListener("blur", validatePhone);
 phoneInput.addEventListener("focus", resetInputPhone);
 
+adressInput.addEventListener("blur", validateAdress);
+adressInput.addEventListener("focus", resetInputAdress);
+
+cityInput.addEventListener("blur", validateCity);
+cityInput.addEventListener("focus", resetInputCity);
+
+zipCodeInput.addEventListener("blur", validateZipCode);
+zipCodeInput.addEventListener("focus", resetInputZipCode);
+
 emailInput.addEventListener("blur", validateEmail);
 emailInput.addEventListener("focus", resetInputEmail);
 
-btnRegister.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (
-    nameInput.value == "" ||
-    surnameInput.value == "" ||
-    dniInput.value == "" ||
-    birthdayInput.value == "" ||
-    phoneInput.value == "" ||
-    adressInput.value == "" ||
-    cityInput.value == "" ||
-    zipCode.value == "" ||
-    emailInput.value == "" ||
-    passwordInput.value == "" ||
-    passwordRepeatInput.value == ""
-  ) {
-    validateName();
-    validateSurname();
-    validateDni();
-    validateEmail();
-    validateBirthday();
-    validatePhone();
-  } else {
-    if (validateName()) {
-      alert(
-        "Name: " +
-          nameInput.value +
-          "\nSurname: " +
-          surnameInput.value +
-          "\nBirthday: " +
-          birthdayInput.value
-      );
-    } else {
-      alert("Wrong Fields");
-    }
-  }
-});
+passwordInput.addEventListener("blur", validatePassword);
+passwordInput.addEventListener("focus", resetInputPassword);
+
+passwordRepeatInput.addEventListener("blur", validateRepeatPassword);
+passwordRepeatInput.addEventListener("focus", resetInputRepeatPassword);
+
+btnRegister.addEventListener("click", registerValidate);

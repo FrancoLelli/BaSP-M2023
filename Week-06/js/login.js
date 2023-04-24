@@ -76,19 +76,28 @@ var resetInputPassword = function () {
   errorPasswordClass.style.display = "none";
 };
 
+var validateAllInformation = function () {
+  var array = [];
+  if (!validateEmail()) {
+    array.push("The field Email is wrong");
+  }
+  if (!validatePassword()) {
+    array.push("\nThe field Password is wrong");
+  }
+  return array
+}
+
 var loginValidate = function (e) {
   e.preventDefault();
-  if (emailInput.value == "" || passwordInput.value == "") {
-    validatePassword();
-    validateEmail();
-  } else {
-    if (validatePassword() && validateEmail()) {
-      alert(
-        "Email: " + emailInput.value + " , Password: " + passwordInput.value
-      );
-    } else {
-      alert("Wrong Fields");
-    }
+  if(validateAllInformation() == ""){
+    alert(
+        "Email: " +
+        emailInput.value +
+        "\nPassword: " +
+        passwordInput.value
+    );
+  }else{
+    alert(validateAllInformation())
   }
 };
 
