@@ -12,21 +12,24 @@ var btnLogin = document.getElementById("btn-login");
 var validateEmail = function () {
   if (!emailExpression.test(emailInput.value.trim())) {
     emailText.innerHTML = "Email*";
-    emailText.style.color = "red";
-    emailInput.style.border = "1px solid red";
-    errorEmailClass.style.display = "flex";
+    emailText.classList.add("error-text");
+    emailInput.classList.add("error-input");
+    errorEmailClass.classList.add("error");
+    errorEmailClass.classList.remove("label-none");
     return false;
   } else {
-    emailInput.style.border = "2px solid green";
+    emailInput.classList.add("validate-input");
     return true;
   }
 };
 
 var resetInputEmail = function () {
   emailText.innerHTML = "Email";
-  emailText.style.color = "initial";
-  emailInput.style.border = "initial";
-  errorEmailClass.style.display = "none";
+  emailText.classList.remove("error-text");
+  emailInput.classList.remove("validate-input");
+  emailInput.classList.remove("error-input");
+  errorEmailClass.classList.remove("error");
+  errorEmailClass.classList.add("label-none");
 };
 
 var validatePassword = function () {
@@ -43,37 +46,46 @@ var validatePassword = function () {
       letter = true;
     } else {
       passwordText.innerHTML = "Password*";
-      passwordText.style.color = "red";
-      passwordInput.style.border = "1px solid red";
-      errorPasswordClass.style.display = "flex";
+      passwordText.classList.add("error-text");
+      passwordInput.classList.add("error-input");
+      errorPasswordClass.classList.add("error");
+      errorPasswordClass.classList.remove("label-none");
+      errorPasswordClass.innerHTML =
+        "Password must have only letter and numbers";
       return false;
     }
   }
   if (letter && number) {
     if (passwordInput.value.length < 8) {
       passwordText.innerHTML = "Password*";
-      passwordText.style.color = "red";
-      passwordInput.style.border = "1px solid red";
-      errorPasswordClass.style.display = "flex";
+      passwordText.classList.add("error-text");
+      passwordInput.classList.add("error-input");
+      errorPasswordClass.classList.add("error");
+      errorPasswordClass.classList.remove("label-none");
+      errorPasswordClass.innerHTML = "Password must have at least 8 characters";
       return false;
     } else {
-      passwordInput.style.border = "2px solid green";
-      return true;
+        passwordInput.classList.add("validate-input");
+        return true;
     }
   } else {
     passwordText.innerHTML = "Password*";
-    passwordText.style.color = "red";
-    passwordInput.style.border = "1px solid red";
-    errorPasswordClass.style.display = "flex";
+    passwordText.classList.add("error-text");
+    passwordInput.classList.add("error-input");
+    errorPasswordClass.classList.add("error");
+    errorPasswordClass.classList.remove("label-none");
+    errorPasswordClass.innerHTML = "Password must have only letter and numbers";
     return false;
   }
 };
 
 var resetInputPassword = function () {
   passwordText.innerHTML = "Password";
-  passwordText.style.color = "initial";
-  passwordInput.style.border = "initial";
-  errorPasswordClass.style.display = "none";
+  passwordText.classList.remove("error-text");
+  passwordInput.classList.remove("validate-input");
+  passwordInput.classList.remove("error-input");
+  errorPasswordClass.classList.remove("error");
+  errorPasswordClass.classList.add("label-none");
 };
 
 var validateAllInformation = function () {
@@ -84,20 +96,15 @@ var validateAllInformation = function () {
   if (!validatePassword()) {
     array.push("\nThe field Password is wrong");
   }
-  return array
-}
+  return array;
+};
 
 var loginValidate = function (e) {
   e.preventDefault();
-  if(validateAllInformation() == ""){
-    alert(
-        "Email: " +
-        emailInput.value +
-        "\nPassword: " +
-        passwordInput.value
-    );
-  }else{
-    alert(validateAllInformation())
+  if (validateAllInformation() == "") {
+    alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
+  } else {
+    alert(validateAllInformation());
   }
 };
 

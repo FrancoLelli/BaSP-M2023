@@ -376,7 +376,6 @@ var validateCity = function () {
   var cityValue = cityInput.value.trim();
   for (var i = 0; i < cityValue.length; i++) {
     var char = cityValue[i];
-    console.log(char);
     if (
       (char >= "a" && char <= "z") ||
       (char >= "A" && char <= "Z") ||
