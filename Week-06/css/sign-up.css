@@ -118,7 +118,7 @@ body {
     }
 
     .logo-rocket {
-        width: 160px;
+        width: 130px;
     }
 
     .img-desktop {
@@ -139,5 +139,9 @@ body {
         display: flex;
         flex-flow: column wrap;
         height: 40rem;
+    }
+
+    .have-account {
+        margin: 0;
     }
 }

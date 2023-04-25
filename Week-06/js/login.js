@@ -1,11 +1,11 @@
-var errorEmailClass = document.getElementById("errorEmail");
-var emailInput = document.getElementById("emailInput");
 var emailText = document.getElementById("emailText");
+var emailInput = document.getElementById("emailInput");
+var errorEmailClass = document.getElementById("errorEmail");
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-var errorPasswordClass = document.getElementById("errorPassword");
-var passwordInput = document.getElementById("passwordInput");
 var passwordText = document.getElementById("passwordText");
+var passwordInput = document.getElementById("passwordInput");
+var errorPasswordClass = document.getElementById("errorPassword");
 
 var btnLogin = document.getElementById("btn-login");
 
@@ -101,10 +101,11 @@ var validateAllInformation = function () {
 
 var loginValidate = function (e) {
   e.preventDefault();
-  if (validateAllInformation() == "") {
+  var returnValidate = validateAllInformation()
+  if (returnValidate == "") {
     alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
   } else {
-    alert(validateAllInformation());
+    alert(returnValidate);
   }
 };
 

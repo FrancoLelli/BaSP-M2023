@@ -685,7 +685,8 @@ var validateAllInformation = function () {
 
 var registerValidate = function (e) {
   e.preventDefault();
-  if (validateAllInformation() == "") {
+  var returnValidate = validateAllInformation()
+  if (returnValidate == "") {
     alert(
       "Name: " +
         nameInput.value +
@@ -709,7 +710,7 @@ var registerValidate = function (e) {
         passwordInput.value
     );
   } else {
-    alert(validateAllInformation());
+    alert(returnValidate);
   }
 };
 

@@ -27,7 +27,7 @@ We solved exercises in Javascript
 ## Week 06
 [GitHub Pages](https://francolelli.github.io/BaSP-M2023/Week-06/views/index.html)
 
-we add the login and sign up, with their respective validations in javascript to the landing (In mobile, you will have 
+We add the login and sign up, with their respective validations in javascript to the landing (In mobile, you will have 
 to change the display: none to diplay: flex in the aside to view it)
 
 ## Authors

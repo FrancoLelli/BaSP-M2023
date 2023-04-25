@@ -133,8 +133,32 @@
 }
 
 .textarea {
+  width: 80%;
   margin: 10px 0;
   border-radius: 10px;
+}
+
+.label-none {
+  display: none;
+}
+
+.error-text {
+  color: red;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.error {
+  display: flex;
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.validate-input {
+  border: 2px solid green;
 }
 
 .form-btn {
