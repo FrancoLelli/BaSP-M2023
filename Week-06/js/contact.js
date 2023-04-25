@@ -22,6 +22,8 @@ var errorMessageClass = document.getElementById("errorMessage");
 
 var btnSubmit = document.getElementById("btnSubmit");
 
+var btnReset = document.getElementById("btnReset");
+
 var validateName = function () {
   var isText = false;
   var nameValue = nameInput.value.trim();
@@ -208,6 +210,14 @@ var resetInputMessage = function () {
   errorMessageClass.classList.add("label-none");
 };
 
+var resetForm = function () {
+  resetInputName();
+  resetInputSurname();
+  resetInputEmail();
+  resetInputSelect();
+  resetInputMessage();
+};
+
 var validateAllInformation = function () {
   var array = [];
   if (!validateName()) {
@@ -265,3 +275,4 @@ messageInput.addEventListener("blur", validateMessage);
 messageInput.addEventListener("focus", resetInputMessage);
 
 btnSubmit.addEventListener("click", formValidate);
+btnReset.addEventListener("click", resetForm);
