@@ -110,16 +110,19 @@ var loginValidate = function (e) {
 
     fetch(url)
       .then(function (resp) {
+        if(!resp.ok){
+          throw new Error()
+        }
         return resp.json();
       })
       .then(function (data) {
         alert("The request was successful:\n" + JSON.stringify(data));
+        alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
       })
       .catch(function (err) {
         alert("The request could not be performed successfully:\n" + err);
       });
 
-    /* alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value); */
   } else {
     alert(returnValidate);
   }

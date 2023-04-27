@@ -18,9 +18,9 @@ var phoneText = document.getElementById("phoneText");
 var phoneInput = document.getElementById("phoneInput");
 var errorPhoneClass = document.getElementById("errorPhone");
 
-var adressText = document.getElementById("adressText");
-var adressInput = document.getElementById("adressInput");
-var errorAdressClass = document.getElementById("errorAdress");
+var addressText = document.getElementById("addressText");
+var addressInput = document.getElementById("addressInput");
+var errorAddressClass = document.getElementById("errorAddress");
 
 var cityText = document.getElementById("cityText");
 var cityInput = document.getElementById("cityInput");
@@ -307,14 +307,14 @@ var resetInputPhone = function () {
   errorPhoneClass.classList.add("label-none");
 };
 
-var validateAdress = function () {
+var validateAddress = function () {
   var haveNumber = false;
   var haveLetter = false;
   var existSpace = false;
   var haveSpace = 0;
-  var adressValue = adressInput.value.trim();
-  for (var i = 0; i < adressValue.length; i++) {
-    var char = adressValue[i];
+  var addressValue = addressInput.value.trim();
+  for (var i = 0; i < addressValue.length; i++) {
+    var char = addressValue[i];
     if (char == " ") {
       haveSpace += 1;
     }
@@ -325,49 +325,49 @@ var validateAdress = function () {
     } else if (haveSpace >= 1) {
       existSpace = true;
     } else {
-      adressText.innerHTML = "Adress*";
-      adressText.classList.add("error-text");
-      adressInput.classList.add("error-input");
-      errorAdressClass.classList.add("error");
-      errorAdressClass.classList.remove("label-none");
-      errorAdressClass.innerHTML =
-        "Adress must have only numbers or letter and one space";
+      addressText.innerHTML = "Address*";
+      addressText.classList.add("error-text");
+      addressInput.classList.add("error-input");
+      errorAddressClass.classList.add("error");
+      errorAddressClass.classList.remove("label-none");
+      errorAddressClass.innerHTML =
+        "Address must have only numbers or letter and one space";
       return false;
     }
   }
 
-  if (adressValue.length >= 5) {
+  if (addressValue.length >= 5) {
     if (haveLetter && haveNumber && existSpace) {
-      adressInput.classList.add("validate-input");
+      addressInput.classList.add("validate-input");
       return true;
     } else {
-      adressText.innerHTML = "Adress*";
-      adressText.classList.add("error-text");
-      adressInput.classList.add("error-input");
-      errorAdressClass.classList.add("error");
-      errorAdressClass.classList.remove("label-none");
-      errorAdressClass.innerHTML =
-        "Adress must have only numbers or letter and one space";
+      addressText.innerHTML = "Address*";
+      addressText.classList.add("error-text");
+      addressInput.classList.add("error-input");
+      errorAddressClass.classList.add("error");
+      errorAddressClass.classList.remove("label-none");
+      errorAddressClass.innerHTML =
+        "Address must have only numbers or letter and one space";
       return false;
     }
   } else {
-    adressText.innerHTML = "Adress*";
-    adressText.classList.add("error-text");
-    adressInput.classList.add("error-input");
-    errorAdressClass.classList.add("error");
-    errorAdressClass.classList.remove("label-none");
-    errorAdressClass.innerHTML = "The field must at least 5 characters";
+    addressText.innerHTML = "Address*";
+    addressText.classList.add("error-text");
+    addressInput.classList.add("error-input");
+    errorAddressClass.classList.add("error");
+    errorAddressClass.classList.remove("label-none");
+    errorAddressClass.innerHTML = "The field must at least 5 characters";
     return false;
   }
 };
 
-var resetInputAdress = function () {
-  adressText.innerHTML = "Adress";
-  adressText.classList.remove("error-text");
-  adressInput.classList.remove("validate-input");
-  adressInput.classList.remove("error-input");
-  errorAdressClass.classList.remove("error");
-  errorAdressClass.classList.add("label-none");
+var resetInputAddress = function () {
+  addressText.innerHTML = "Address";
+  addressText.classList.remove("error-text");
+  addressInput.classList.remove("validate-input");
+  addressInput.classList.remove("error-input");
+  errorAddressClass.classList.remove("error");
+  errorAddressClass.classList.add("label-none");
 };
 
 var validateCity = function () {
@@ -662,8 +662,8 @@ var validateAllInformation = function () {
   if (!validatePhone()) {
     array.push("\nThe field Phone is wrong");
   }
-  if (!validateAdress()) {
-    array.push("\nThe field Adress is wrong");
+  if (!validateAddress()) {
+    array.push("\nThe field address is wrong");
   }
   if (!validateCity()) {
     array.push("\nThe field City is wrong");
@@ -685,30 +685,76 @@ var validateAllInformation = function () {
 
 var registerValidate = function (e) {
   e.preventDefault();
-  var returnValidate = validateAllInformation()
+  var returnValidate = validateAllInformation();
   if (returnValidate == "") {
-    alert(
-      "Name: " +
-        nameInput.value +
-        "\nSurname: " +
-        surnameInput.value +
-        "\nDNI: " +
-        dniInput.value +
-        "\nBirthday: " +
-        birthdayInput.value +
-        "\nPhone: " +
-        phoneInput.value +
-        "\nAdress: " +
-        adressInput.value +
-        "\nCity: " +
-        cityInput.value +
-        "\nZip Code: " +
-        zipCodeInput.value +
-        "\nEmail: " +
-        emailInput.value +
-        "\nPassword: " +
-        passwordInput.value
-    );
+    var nameValue = nameInput.value.trim();
+    var surnameValue = surnameInput.value.trim();
+    var dniValue = dniInput.value.trim();
+    var birthdayDMY = birthdayInput.value.split("-");
+    var birthdayValue =
+      birthdayDMY[1] + "/" + birthdayDMY[2] + "/" + birthdayDMY[0];
+    var phoneValue = phoneInput.value.trim();
+    var addressValue = addressInput.value.trim();
+    var cityValue = cityInput.value.trim();
+    var zipCodeValue = zipCodeInput.value.trim();
+    var emailValue = emailInput.value.trim();
+    var passwordValue = passwordInput.value.trim();
+
+    var url =
+      `https://api-rest-server.vercel.app/signup?name=${nameValue}&` +
+      `lastName=${surnameValue}&` +
+      `dni=${dniValue}&` +
+      `dob=${birthdayValue}&` +
+      `phone=${phoneValue}&` +
+      `address=${addressValue}&` +
+      `city=${cityValue}&` +
+      `zip=${zipCodeValue}&` +
+      `email=${emailValue}&` +
+      `password=${passwordValue}`;
+
+    fetch(url)
+      .then(function (resp) {
+        return resp.json();
+      })
+      .then(function (data) {
+        localStorage.setItem("name", nameValue);
+        localStorage.setItem("surname", surnameValue);
+        localStorage.setItem("dni", dniValue);
+        birthdayValue = birthdayInput.value;
+        localStorage.setItem("birthday", birthdayValue);
+        localStorage.setItem("phone", phoneValue);
+        localStorage.setItem("address", addressValue);
+        localStorage.setItem("zipCode", zipCodeValue);
+        localStorage.setItem("city", cityValue);
+        localStorage.setItem("email", emailValue);
+        localStorage.setItem("password", passwordValue);
+        alert("The request was successful:\n" + JSON.stringify(data));
+        alert(
+          "Name: " +
+            nameInput.value +
+            "\nSurname: " +
+            surnameInput.value +
+            "\nDNI: " +
+            dniInput.value +
+            "\nBirthday: " +
+            birthdayInput.value +
+            "\nPhone: " +
+            phoneInput.value +
+            "\naddress: " +
+            addressInput.value +
+            "\nCity: " +
+            cityInput.value +
+            "\nZip Code: " +
+            zipCodeInput.value +
+            "\nEmail: " +
+            emailInput.value +
+            "\nPassword: " +
+            passwordInput.value
+        );
+      })
+      .catch(function (err) {
+        alert("The request could not be performed successfully:\n" + err);
+      });
   } else {
     alert(returnValidate);
   }
@@ -729,8 +775,8 @@ birthdayInput.addEventListener("focus", resetInputBirthday);
 phoneInput.addEventListener("blur", validatePhone);
 phoneInput.addEventListener("focus", resetInputPhone);
 
-adressInput.addEventListener("blur", validateAdress);
-adressInput.addEventListener("focus", resetInputAdress);
+addressInput.addEventListener("blur", validateAddress);
+addressInput.addEventListener("focus", resetInputAddress);
 
 cityInput.addEventListener("blur", validateCity);
 cityInput.addEventListener("focus", resetInputCity);
@@ -748,3 +794,30 @@ passwordRepeatInput.addEventListener("blur", validateRepeatPassword);
 passwordRepeatInput.addEventListener("focus", resetInputRepeatPassword);
 
 btnRegister.addEventListener("click", registerValidate);
+
+var completeForm = function () {
+  var nameValue = localStorage.getItem("name");
+  var surnameValue = localStorage.getItem("surname");
+  var dniValue = localStorage.getItem("dni");
+  var birthdayValue = localStorage.getItem("birthday");
+  var phoneValue = localStorage.getItem("phone");
+  var addressValue = localStorage.getItem("address");
+  var cityValue = localStorage.getItem("city");
+  var zipCodeValue = localStorage.getItem("zipCode");
+  var emailValue = localStorage.getItem("email");
+  var passwordValue = localStorage.getItem("password");
+
+  nameInput.value = nameValue;
+  surnameInput.value = surnameValue;
+  dniInput.value = dniValue;
+  birthdayInput.value = birthdayValue;
+  phoneInput.value = phoneValue;
+  addressInput.value = addressValue;
+  cityInput.value = cityValue;
+  zipCodeInput.value = zipCodeValue;
+  emailInput.value = emailValue;
+  passwordInput.value = passwordValue;
+  passwordRepeatInput.value = passwordValue;
+};
+
+window.addEventListener("load", completeForm);
