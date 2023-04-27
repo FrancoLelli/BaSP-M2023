@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.footer-text {
+  width: 80%;
+  font-size: 0.6rem;
+}
+
+.footer-img {
+  width: 13px;
+  height: 12px;
+}
+
+@media only screen and (min-width: 480px) {
+  .footer-img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    width: 50%;
+  }
+
+  .footer-img {
+    width: 39px;
+    height: 33px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}

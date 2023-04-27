@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaRocket SA - Login</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <script src="../js/login.js" defer></script>
+  </head>
+  <body>
+    <div class="arrow-back-div">
+      <a href="../views/index.html">
+        <img src="../../assets/imgs/arrow-back.png" alt="arrow back" />
+      </a>
+    </div>
+    <div class="image-desktop">
+      <img class="image-desktop-img" src="../../assets/imgs/image-login-desktop.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="logo-rocket">
+        <img
+          class="logo-rocket-img"
+          src="../../assets/imgs/logo-rocket-desktop.jpg"
+          alt="logo rocket"
+        />
+      </div>
+      <form>
+        <div class="form-input-group">
+          <label id="emailText" for="email">Email</label>
+          <div>
+            <img src="../../assets/imgs/user-form.png" alt="user icon" />
+            <input
+              class="inputs"
+              id="emailInput"
+              name="email"
+              type="text"
+              placeholder="Email"
+            />
+            <label id="errorEmail" class="label-none">Wrong Email</label>
+          </div>
+        </div>
+        <div class="form-input-group">
+          <label id="passwordText" for="password">Password</label>
+          <div>
+            <img
+              src="../../assets/imgs/password-form.png"
+              alt="password icon"
+            />
+            <input
+              class="inputs"
+              id="passwordInput"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <label id="errorPassword" class="label-none"></label>
+          </div>
+        </div>
+        <div class="keep-forgot">
+          <label class="keep-text">
+            <input type="checkbox" name="keep-signed" id="keep-signed" />
+            Keep me Signed
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button id="btn-login" class="button-login" type="submit">Login</button>
+      </form>
+      <div>
+        <p class="new-user">
+          You are new?
+          <a class="prees-here" href="./sign-up.html">Press here</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

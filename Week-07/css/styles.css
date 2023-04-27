@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-blue {
+    background-color: #373867;
+}
+
+.bg-white {
+    background-color: #EBECF0;
+}
+
+.bg-green {
+    background-color: #AACE9B;
+}
+
+.letter-blue {
+    color: #373867;
+}
+
+.letter-white {
+    color: #EBECF0;
+}
+
+.letter-green {
+    color: #34646F;
+}
+
+@media only screen and (min-width: 480px) {
+    body {
+        flex-direction: row;
+    }
+}
