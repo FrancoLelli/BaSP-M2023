@@ -47,6 +47,17 @@ var errorPasswordRepeatClass = document.getElementById(
 
 var btnRegister = document.getElementById("btnRegister");
 
+var modalLogin = document.getElementById("modalAlert");
+var modalText = document.getElementById("titleModal");
+var modalContent = document.getElementById("contentModal");
+var otherData = document.getElementById("otherData");
+var btnModal = document.getElementById("btnModal");
+
+var modalErrorLogin = document.getElementById("modalErrorAlert");
+var modalErrorText = document.getElementById("titleErrorModal");
+var contentErrorModal = document.getElementById("contentErrorModal");
+var btnErrorModal = document.getElementById("btnErrorModal");
+
 var validateName = function () {
   var isText = false;
   var nameValue = nameInput.value.trim();
@@ -322,7 +333,7 @@ var validateAddress = function () {
       haveLetter = true;
     } else if (char >= "0" && char <= "9") {
       haveNumber = true;
-    } else if (haveSpace >= 1) {
+    } else if (haveSpace <= 1) {
       existSpace = true;
     } else {
       addressText.innerHTML = "Address*";
@@ -716,7 +727,10 @@ var registerValidate = function (e) {
       .then(function (resp) {
         return resp.json();
       })
-      .then(function (data) {
+      .then(function (resp) {
+        if (!resp.success) {
+          throw new Error(JSON.stringify(resp));
+        }
         localStorage.setItem("name", nameValue);
         localStorage.setItem("surname", surnameValue);
         localStorage.setItem("dni", dniValue);
@@ -728,36 +742,50 @@ var registerValidate = function (e) {
         localStorage.setItem("city", cityValue);
         localStorage.setItem("email", emailValue);
         localStorage.setItem("password", passwordValue);
-        alert("The request was successful:\n" + JSON.stringify(data));
-        alert(
+        modalLogin.style.display = "block";
+        modalText.innerHTML = "The request was successful";
+        modalContent.innerHTML = JSON.stringify(resp.msg);
+        otherData.innerHTML =
           "Name: " +
-            nameInput.value +
-            "\nSurname: " +
-            surnameInput.value +
-            "\nDNI: " +
-            dniInput.value +
-            "\nBirthday: " +
-            birthdayInput.value +
-            "\nPhone: " +
-            phoneInput.value +
-            "\naddress: " +
-            addressInput.value +
-            "\nCity: " +
-            cityInput.value +
-            "\nZip Code: " +
-            zipCodeInput.value +
-            "\nEmail: " +
-            emailInput.value +
-            "\nPassword: " +
-            passwordInput.value
-        );
+          nameInput.value +
+          "\nSurname: " +
+          surnameInput.value +
+          "\nDNI: " +
+          dniInput.value +
+          "\nBirthday: " +
+          birthdayInput.value +
+          "\nPhone: " +
+          phoneInput.value +
+          "\naddress: " +
+          addressInput.value +
+          "\nCity: " +
+          cityInput.value +
+          "\nZip Code: " +
+          zipCodeInput.value +
+          "\nEmail: " +
+          emailInput.value +
+          "\nPassword: " +
+          passwordInput.value;
       })
       .catch(function (err) {
-        alert("The request could not be performed successfully:\n" + err);
+        modalErrorLogin.style.display = "block";
+        modalErrorText.innerHTML =
+          "The request could not be performed successfully:";
+        contentErrorModal.innerHTML = err.msg;
       });
   } else {
-    alert(returnValidate);
+    modalErrorLogin.style.display = "block";
+    modalErrorText.innerHTML = "Error. There are wrong fields:";
+    contentErrorModal.innerHTML = returnValidate;
   }
+};
+
+var resetModal = function () {
+  modalLogin.style.display = "none";
+};
+
+var resetErrorModal = function () {
+  modalErrorLogin.style.display = "none";
 };
 
 nameInput.addEventListener("blur", validateName);
@@ -794,6 +822,9 @@ passwordRepeatInput.addEventListener("blur", validateRepeatPassword);
 passwordRepeatInput.addEventListener("focus", resetInputRepeatPassword);
 
 btnRegister.addEventListener("click", registerValidate);
+
+btnModal.addEventListener("click", resetModal);
+btnErrorModal.addEventListener("click", resetErrorModal);
 
 var completeForm = function () {
   var nameValue = localStorage.getItem("name");

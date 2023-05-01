@@ -9,6 +9,17 @@ var errorPasswordClass = document.getElementById("errorPassword");
 
 var btnLogin = document.getElementById("btn-login");
 
+var modalLogin = document.getElementById("modalAlert");
+var modalText = document.getElementById("titleModal");
+var modalContent = document.getElementById("contentModal");
+var otherData = document.getElementById("otherData")
+var btnModal = document.getElementById("btnModal")
+
+var modalErrorLogin = document.getElementById("modalErrorAlert");
+var modalErrorText = document.getElementById("titleErrorModal");
+var contentErrorModal = document.getElementById("contentErrorModal")
+var btnErrorModal = document.getElementById("btnErrorModal")
+
 var validateEmail = function () {
   if (!emailExpression.test(emailInput.value.trim())) {
     emailText.innerHTML = "Email*";
@@ -110,23 +121,36 @@ var loginValidate = function (e) {
 
     fetch(url)
       .then(function (resp) {
-        if(!resp.ok){
-          throw new Error()
-        }
         return resp.json();
       })
-      .then(function (data) {
-        alert("The request was successful:\n" + JSON.stringify(data));
-        alert("Email: " + emailInput.value + "\nPassword: " + passwordInput.value);
+      .then(function (resp) {
+        if (!resp.success) {
+          throw new Error(JSON.stringify(resp));
+        }
+        modalLogin.style.display = "block";
+        modalText.innerHTML = "The request was successful";
+        modalContent.innerHTML = JSON.stringify(resp);
+        otherData.innerHTML = "Email: " + emailInput.value + "\nPassword: " + passwordInput.value
       })
       .catch(function (err) {
-        alert("The request could not be performed successfully:\n" + err);
+        modalErrorLogin.style.display = "block";
+        modalErrorText.innerHTML = "The request could not be performed successfully:";
+        contentErrorModal.innerHTML = err;
       });
-
   } else {
-    alert(returnValidate);
+    modalErrorLogin.style.display = "block";
+    modalErrorText.innerHTML = "Error. There are wrong fields:";
+    contentErrorModal.innerHTML = returnValidate;
   }
 };
+
+var resetModal = function () {
+  modalLogin.style.display = "none";
+}
+
+var resetErrorModal = function () {
+  modalErrorLogin.style.display = "none";
+}
 
 emailInput.addEventListener("blur", validateEmail);
 emailInput.addEventListener("focus", resetInputEmail);
@@ -135,3 +159,6 @@ passwordInput.addEventListener("blur", validatePassword);
 passwordInput.addEventListener("focus", resetInputPassword);
 
 btnLogin.addEventListener("click", loginValidate);
+
+btnModal.addEventListener("click", resetModal)
+btnErrorModal.addEventListener("click", resetErrorModal)

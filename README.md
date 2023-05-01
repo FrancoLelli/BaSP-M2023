@@ -30,5 +30,11 @@ We solved exercises in Javascript
 We add the login and sign up, with their respective validations in javascript to the landing (In mobile, you will have 
 to change the display: none to diplay: flex in the aside to view it)
 
+## Week 07
+[GitHub Pages](https://francolelli.github.io/BaSP-M2023/Week-07/views/index.html)
+
+We add call to an api in the login and sign up and save the sign up data in the localstorage.
+(In mobile, you will have to change the display: none to diplay: flex in the aside to view it)
+
 ## Authors
 - Franco Gaston Lelli
