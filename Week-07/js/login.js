@@ -12,21 +12,34 @@ var btnLogin = document.getElementById("btn-login");
 var modalLogin = document.getElementById("modalAlert");
 var modalText = document.getElementById("titleModal");
 var modalContent = document.getElementById("contentModal");
-var otherData = document.getElementById("otherData")
-var btnModal = document.getElementById("btnModal")
+var otherData = document.getElementById("otherData");
+var btnModal = document.getElementById("btnModal");
 
 var modalErrorLogin = document.getElementById("modalErrorAlert");
 var modalErrorText = document.getElementById("titleErrorModal");
-var contentErrorModal = document.getElementById("contentErrorModal")
-var btnErrorModal = document.getElementById("btnErrorModal")
+var contentErrorModal = document.getElementById("contentErrorModal");
+var btnErrorModal = document.getElementById("btnErrorModal");
+
+var stylesValidate = function (inputText, input, inputClass, inputName) {
+  inputText.innerHTML = inputName + "*";
+  inputText.classList.add("error-text");
+  input.classList.add("error-input");
+  inputClass.classList.add("error");
+  inputClass.classList.remove("label-none");
+};
+
+var resetStyles = function (inputText, input, inputClass, inputName) {
+  inputText.innerHTML = inputName;
+  inputText.classList.remove("error-text");
+  input.classList.remove("validate-input");
+  input.classList.remove("error-input");
+  inputClass.classList.remove("error");
+  inputClass.classList.add("label-none");
+};
 
 var validateEmail = function () {
   if (!emailExpression.test(emailInput.value.trim())) {
-    emailText.innerHTML = "Email*";
-    emailText.classList.add("error-text");
-    emailInput.classList.add("error-input");
-    errorEmailClass.classList.add("error");
-    errorEmailClass.classList.remove("label-none");
+    stylesValidate(emailText, emailInput, errorEmailClass, "Email");
     return false;
   } else {
     emailInput.classList.add("validate-input");
@@ -35,12 +48,7 @@ var validateEmail = function () {
 };
 
 var resetInputEmail = function () {
-  emailText.innerHTML = "Email";
-  emailText.classList.remove("error-text");
-  emailInput.classList.remove("validate-input");
-  emailInput.classList.remove("error-input");
-  errorEmailClass.classList.remove("error");
-  errorEmailClass.classList.add("label-none");
+  resetStyles(emailText, emailInput, errorEmailClass, "Email");
 };
 
 var validatePassword = function () {
@@ -56,11 +64,12 @@ var validatePassword = function () {
     ) {
       letter = true;
     } else {
-      passwordText.innerHTML = "Password*";
-      passwordText.classList.add("error-text");
-      passwordInput.classList.add("error-input");
-      errorPasswordClass.classList.add("error");
-      errorPasswordClass.classList.remove("label-none");
+      stylesValidate(
+        passwordText,
+        passwordInput,
+        errorPasswordClass,
+        "Password"
+      );
       errorPasswordClass.innerHTML =
         "Password must have only letter and numbers";
       return false;
@@ -68,11 +77,12 @@ var validatePassword = function () {
   }
   if (letter && number) {
     if (passwordInput.value.length < 8) {
-      passwordText.innerHTML = "Password*";
-      passwordText.classList.add("error-text");
-      passwordInput.classList.add("error-input");
-      errorPasswordClass.classList.add("error");
-      errorPasswordClass.classList.remove("label-none");
+      stylesValidate(
+        passwordText,
+        passwordInput,
+        errorPasswordClass,
+        "Password"
+      );
       errorPasswordClass.innerHTML = "Password must have at least 8 characters";
       return false;
     } else {
@@ -80,23 +90,14 @@ var validatePassword = function () {
       return true;
     }
   } else {
-    passwordText.innerHTML = "Password*";
-    passwordText.classList.add("error-text");
-    passwordInput.classList.add("error-input");
-    errorPasswordClass.classList.add("error");
-    errorPasswordClass.classList.remove("label-none");
+    stylesValidate(passwordText, passwordInput, errorPasswordClass, "Password");
     errorPasswordClass.innerHTML = "Password must have only letter and numbers";
     return false;
   }
 };
 
 var resetInputPassword = function () {
-  passwordText.innerHTML = "Password";
-  passwordText.classList.remove("error-text");
-  passwordInput.classList.remove("validate-input");
-  passwordInput.classList.remove("error-input");
-  errorPasswordClass.classList.remove("error");
-  errorPasswordClass.classList.add("label-none");
+  resetStyles(passwordText, passwordInput, errorPasswordClass, "Password");
 };
 
 var validateAllInformation = function () {
@@ -130,11 +131,13 @@ var loginValidate = function (e) {
         modalLogin.style.display = "block";
         modalText.innerHTML = "The request was successful";
         modalContent.innerHTML = JSON.stringify(resp);
-        otherData.innerHTML = "Email: " + emailInput.value + "\nPassword: " + passwordInput.value
+        otherData.innerHTML =
+          "Email: " + emailInput.value + ",\nPassword: " + passwordInput.value;
       })
       .catch(function (err) {
         modalErrorLogin.style.display = "block";
-        modalErrorText.innerHTML = "The request could not be performed successfully:";
+        modalErrorText.innerHTML =
+          "The request could not be performed successfully:";
         contentErrorModal.innerHTML = err;
       });
   } else {
@@ -146,11 +149,11 @@ var loginValidate = function (e) {
 
 var resetModal = function () {
   modalLogin.style.display = "none";
-}
+};
 
 var resetErrorModal = function () {
   modalErrorLogin.style.display = "none";
-}
+};
 
 emailInput.addEventListener("blur", validateEmail);
 emailInput.addEventListener("focus", resetInputEmail);
@@ -160,5 +163,5 @@ passwordInput.addEventListener("focus", resetInputPassword);
 
 btnLogin.addEventListener("click", loginValidate);
 
-btnModal.addEventListener("click", resetModal)
-btnErrorModal.addEventListener("click", resetErrorModal)
+btnModal.addEventListener("click", resetModal);
+btnErrorModal.addEventListener("click", resetErrorModal);

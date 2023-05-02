@@ -58,6 +58,23 @@ var modalErrorText = document.getElementById("titleErrorModal");
 var contentErrorModal = document.getElementById("contentErrorModal");
 var btnErrorModal = document.getElementById("btnErrorModal");
 
+var stylesValidate = function (inputText, input, inputClass, inputName) {
+  inputText.innerHTML = inputName + "*";
+  inputText.classList.add("error-text");
+  input.classList.add("error-input");
+  inputClass.classList.add("error");
+  inputClass.classList.remove("label-none");
+};
+
+var resetStyles = function (inputText, input, inputClass, inputName) {
+  inputText.innerHTML = inputName;
+  inputText.classList.remove("error-text");
+  input.classList.remove("validate-input");
+  input.classList.remove("error-input");
+  inputClass.classList.remove("error");
+  inputClass.classList.add("label-none");
+};
+
 var validateName = function () {
   var isText = false;
   var nameValue = nameInput.value.trim();
@@ -70,11 +87,7 @@ var validateName = function () {
     ) {
       isText = true;
     } else {
-      nameText.innerHTML = "Name*";
-      nameText.classList.add("error-text");
-      nameInput.classList.add("error-input");
-      errorNameClass.classList.add("error");
-      errorNameClass.classList.remove("label-none");
+      stylesValidate(nameText, nameInput, errorNameClass, "Name");
       errorNameClass.innerHTML = "The field only accepts letters";
       return false;
     }
@@ -84,31 +97,19 @@ var validateName = function () {
       nameInput.classList.add("validate-input");
       return true;
     } else {
-      nameText.innerHTML = "Name*";
-      nameText.classList.add("error-text");
-      nameInput.classList.add("error-input");
-      errorNameClass.classList.add("error");
-      errorNameClass.classList.remove("label-none");
+      stylesValidate(nameText, nameInput, errorNameClass, "Name");
       errorNameClass.innerHTML = "Must have at least 3 letters";
       return false;
     }
   } else {
-    nameText.innerHTML = "Name*";
-    nameText.classList.add("error-text");
-    nameInput.classList.add("error-input");
-    errorNameClass.classList.add("error");
-    errorNameClass.classList.remove("label-none");
+    stylesValidate(nameText, nameInput, errorNameClass, "Name");
     errorNameClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputName = function () {
-  nameText.innerHTML = "Name";
-  nameText.classList.remove("error-text");
-  nameInput.classList.remove("validate-input");
-  errorNameClass.classList.remove("error");
-  errorNameClass.classList.add("label-none");
+  resetStyles(nameText, nameInput, errorNameClass, "Name");
 };
 
 var validateSurname = function () {
@@ -123,11 +124,7 @@ var validateSurname = function () {
     ) {
       isText = true;
     } else {
-      surnameText.innerHTML = "Surname*";
-      surnameText.classList.add("error-text");
-      surnameInput.classList.add("error-input");
-      errorSurnameClass.classList.add("error");
-      errorSurnameClass.classList.remove("label-none");
+      stylesValidate(surnameText, surnameInput, errorSurnameClass, "Surname");
       errorSurnameClass.innerHTML = "The field only accepts letters";
       return false;
     }
@@ -137,32 +134,19 @@ var validateSurname = function () {
       surnameInput.classList.add("validate-input");
       return true;
     } else {
-      surnameText.innerHTML = "Surname*";
-      surnameText.classList.add("error-text");
-      surnameInput.classList.add("error-input");
-      errorSurnameClass.classList.add("error");
-      errorSurnameClass.classList.remove("label-none");
+      stylesValidate(surnameText, surnameInput, errorSurnameClass, "Surname");
       errorSurnameClass.innerHTML = "Must have at least 3 letters";
       return false;
     }
   } else {
-    surnameText.innerHTML = "Surname*";
-    surnameText.classList.add("error-text");
-    surnameInput.classList.add("error-input");
-    errorSurnameClass.classList.add("error");
-    errorSurnameClass.classList.remove("label-none");
+    stylesValidate(surnameText, surnameInput, errorSurnameClass, "Surname");
     errorSurnameClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputSurname = function () {
-  surnameText.innerHTML = "Surname";
-  surnameText.classList.remove("error-text");
-  surnameInput.classList.remove("validate-input");
-  surnameInput.classList.remove("error-input");
-  errorSurnameClass.classList.remove("error");
-  errorSurnameClass.classList.add("label-none");
+  resetStyles(surnameText, surnameInput, errorSurnameClass, "Surname");
 };
 
 var validateDni = function () {
@@ -173,11 +157,7 @@ var validateDni = function () {
     if (!isNaN(number)) {
       isNumber = true;
     } else {
-      dniText.innerHTML = "DNI*";
-      dniText.classList.add("error-text");
-      dniInput.classList.add("error-input");
-      errorDniClass.classList.add("error");
-      errorDniClass.classList.remove("label-none");
+      stylesValidate(dniText, dniInput, errorDniClass, "DNI");
       errorDniClass.innerHTML = "Wrong DNI";
       return false;
     }
@@ -188,32 +168,19 @@ var validateDni = function () {
       dniInput.classList.add("validate-input");
       return true;
     } else {
-      dniText.innerHTML = "DNI*";
-      dniText.classList.add("error-text");
-      dniInput.classList.add("error-input");
-      errorDniClass.classList.add("error");
-      errorDniClass.classList.remove("label-none");
+      stylesValidate(dniText, dniInput, errorDniClass, "DNI");
       errorDniClass.innerHTML = "DNI must have between 7 and 9 characters";
       return false;
     }
   } else {
-    dniText.innerHTML = "DNI*";
-    dniText.classList.add("error-text");
-    dniInput.classList.add("error-input");
-    errorDniClass.classList.add("error");
-    errorDniClass.classList.remove("label-none");
+    stylesValidate(dniText, dniInput, errorDniClass, "DNI");
     errorDniClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputDni = function () {
-  dniText.innerHTML = "DNI";
-  dniText.classList.remove("error-text");
-  dniInput.classList.remove("validate-input");
-  dniInput.classList.remove("error-input");
-  errorDniClass.classList.remove("error");
-  errorDniClass.classList.add("label-none");
+  resetStyles(dniText, dniInput, errorDniClass, "DNI");
 };
 
 var validateBirthday = function () {
@@ -227,20 +194,17 @@ var validateBirthday = function () {
     if (age >= 18) {
       isValid = true;
     } else {
-      birthdayText.innerHTML = "Birthday*";
-      birthdayText.classList.add("error-text");
-      birthdayInput.classList.add("error-input");
-      errorBirthdayClass.classList.add("error");
-      errorBirthdayClass.classList.remove("label-none");
+      stylesValidate(
+        birthdayText,
+        birthdayInput,
+        errorBirthdayClass,
+        "Birthday"
+      );
       errorBirthdayClass.innerHTML = "Age must older than or equal 18";
       return false;
     }
   } else {
-    birthdayText.innerHTML = "Birthday*";
-    birthdayText.classList.add("error-text");
-    birthdayInput.classList.add("error-input");
-    errorBirthdayClass.classList.add("error");
-    errorBirthdayClass.classList.remove("label-none");
+    stylesValidate(birthdayText, birthdayInput, errorBirthdayClass, "Birthday");
     errorBirthdayClass.innerHTML = "The field must not be empty";
     return false;
   }
@@ -249,22 +213,13 @@ var validateBirthday = function () {
     birthdayInput.classList.add("validate-input");
     return true;
   } else {
-    birthdayText.innerHTML = "Birthday*";
-    birthdayText.classList.add("error-text");
-    birthdayInput.classList.add("error-input");
-    errorBirthdayClass.classList.add("error");
-    errorBirthdayClass.classList.remove("label-none");
+    stylesValidate(birthdayText, birthdayInput, errorBirthdayClass, "Birthday");
     return false;
   }
 };
 
 var resetInputBirthday = function () {
-  birthdayText.innerHTML = "Birthday";
-  birthdayText.classList.remove("error-text");
-  birthdayInput.classList.remove("validate-input");
-  birthdayInput.classList.remove("error-input");
-  errorBirthdayClass.classList.remove("error");
-  errorBirthdayClass.classList.add("label-none");
+  resetStyles(birthdayText, birthdayInput, errorBirthdayClass, "Birthday");
 };
 
 var validatePhone = function () {
@@ -275,11 +230,7 @@ var validatePhone = function () {
     if (!isNaN(number)) {
       isValid = true;
     } else {
-      phoneText.innerHTML = "Phone*";
-      phoneText.classList.add("error-text");
-      phoneInput.classList.add("error-input");
-      errorPhoneClass.classList.add("error");
-      errorPhoneClass.classList.remove("label-none");
+      stylesValidate(phoneText, phoneInput, errorPhoneClass, "Phone");
       errorPhoneClass.innerHTML = "Phone must have only numbers";
       return false;
     }
@@ -290,32 +241,19 @@ var validatePhone = function () {
       phoneInput.classList.add("validate-input");
       return true;
     } else {
-      phoneText.innerHTML = "Phone*";
-      phoneText.classList.add("error-text");
-      phoneInput.classList.add("error-input");
-      errorPhoneClass.classList.add("error");
-      errorPhoneClass.classList.remove("label-none");
+      stylesValidate(phoneText, phoneInput, errorPhoneClass, "Phone");
       errorPhoneClass.innerHTML = "Phone must have 10 numbers";
       return false;
     }
   } else {
-    phoneText.innerHTML = "Phone*";
-    phoneText.classList.add("error-text");
-    phoneInput.classList.add("error-input");
-    errorPhoneClass.classList.add("error");
-    errorPhoneClass.classList.remove("label-none");
+    stylesValidate(phoneText, phoneInput, errorPhoneClass, "Phone");
     errorPhoneClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputPhone = function () {
-  phoneText.innerHTML = "Phone";
-  phoneText.classList.remove("error-text");
-  phoneInput.classList.remove("validate-input");
-  phoneInput.classList.remove("error-input");
-  errorPhoneClass.classList.remove("error");
-  errorPhoneClass.classList.add("label-none");
+  resetStyles(phoneText, phoneInput, errorPhoneClass, "Phone");
 };
 
 var validateAddress = function () {
@@ -336,11 +274,7 @@ var validateAddress = function () {
     } else if (haveSpace <= 1) {
       existSpace = true;
     } else {
-      addressText.innerHTML = "Address*";
-      addressText.classList.add("error-text");
-      addressInput.classList.add("error-input");
-      errorAddressClass.classList.add("error");
-      errorAddressClass.classList.remove("label-none");
+      stylesValidate(addressText, addressInput, errorAddressClass, "Address");
       errorAddressClass.innerHTML =
         "Address must have only numbers or letter and one space";
       return false;
@@ -352,33 +286,20 @@ var validateAddress = function () {
       addressInput.classList.add("validate-input");
       return true;
     } else {
-      addressText.innerHTML = "Address*";
-      addressText.classList.add("error-text");
-      addressInput.classList.add("error-input");
-      errorAddressClass.classList.add("error");
-      errorAddressClass.classList.remove("label-none");
+      stylesValidate(addressText, addressInput, errorAddressClass, "Address");
       errorAddressClass.innerHTML =
         "Address must have only numbers or letter and one space";
       return false;
     }
   } else {
-    addressText.innerHTML = "Address*";
-    addressText.classList.add("error-text");
-    addressInput.classList.add("error-input");
-    errorAddressClass.classList.add("error");
-    errorAddressClass.classList.remove("label-none");
+    stylesValidate(addressText, addressInput, errorAddressClass, "Address");
     errorAddressClass.innerHTML = "The field must at least 5 characters";
     return false;
   }
 };
 
 var resetInputAddress = function () {
-  addressText.innerHTML = "Address";
-  addressText.classList.remove("error-text");
-  addressInput.classList.remove("validate-input");
-  addressInput.classList.remove("error-input");
-  errorAddressClass.classList.remove("error");
-  errorAddressClass.classList.add("label-none");
+  resetStyles(addressText, addressInput, errorAddressClass, "Address");
 };
 
 var validateCity = function () {
@@ -398,11 +319,7 @@ var validateCity = function () {
       }
       isValid = true;
     } else {
-      cityText.innerHTML = "City*";
-      cityText.classList.add("error-text");
-      cityInput.classList.add("error-input");
-      errorCityClass.classList.add("error");
-      errorCityClass.classList.remove("label-none");
+      stylesValidate(cityText, cityInput, errorCityClass, "City");
       errorCityClass.innerHTML = "City must have only letter and numbers";
       return false;
     }
@@ -413,33 +330,20 @@ var validateCity = function () {
       cityInput.classList.add("validate-input");
       return true;
     } else {
-      cityText.innerHTML = "City*";
-      cityText.classList.add("error-text");
-      cityInput.classList.add("error-input");
-      errorCityClass.classList.add("error");
-      errorCityClass.classList.remove("label-none");
+      stylesValidate(cityText, cityInput, errorCityClass, "City");
       errorCityClass.innerHTML =
         "The field must have at least 4 or more letters";
       return false;
     }
   } else {
-    cityText.innerHTML = "City*";
-    cityText.classList.add("error-text");
-    cityInput.classList.add("error-input");
-    errorCityClass.classList.add("error");
-    errorCityClass.classList.remove("label-none");
+    stylesValidate(cityText, cityInput, errorCityClass, "City");
     errorCityClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputCity = function () {
-  cityText.innerHTML = "City";
-  cityText.classList.remove("error-text");
-  cityInput.classList.remove("validate-input");
-  cityInput.classList.remove("error-input");
-  errorCityClass.classList.remove("error");
-  errorCityClass.classList.add("label-none");
+  resetStyles(cityText, cityInput, errorCityClass, "City");
 };
 
 var validateZipCode = function () {
@@ -450,11 +354,7 @@ var validateZipCode = function () {
     if (!isNaN(number)) {
       isValid = true;
     } else {
-      zipCodeText.innerHTML = "Zip Code*";
-      zipCodeText.classList.add("error-text");
-      zipCodeInput.classList.add("error-input");
-      errorZipCodeClass.classList.add("error");
-      errorZipCodeClass.classList.remove("label-none");
+      stylesValidate(zipCodeText, zipCodeInput, errorZipCodeClass, "Zip Code");
       errorZipCodeClass.innerHTML = "Zip Code must have only numbers";
       return false;
     }
@@ -465,41 +365,24 @@ var validateZipCode = function () {
       zipCodeInput.classList.add("validate-input");
       return true;
     } else {
-      zipCodeText.innerHTML = "Zip Code*";
-      zipCodeText.classList.add("error-text");
-      zipCodeInput.classList.add("error-input");
-      errorZipCodeClass.classList.add("error");
-      errorZipCodeClass.classList.remove("label-none");
+      stylesValidate(zipCodeText, zipCodeInput, errorZipCodeClass, "Zip Code");
       errorZipCodeClass.innerHTML = "Zip Code must have only 4 or 5 numbers";
       return false;
     }
   } else {
-    zipCodeText.innerHTML = "Zip Code*";
-    zipCodeText.classList.add("error-text");
-    zipCodeInput.classList.add("error-input");
-    errorZipCodeClass.classList.add("error");
-    errorZipCodeClass.classList.remove("label-none");
+    stylesValidate(zipCodeText, zipCodeInput, errorZipCodeClass, "Zip Code");
     errorZipCodeClass.innerHTML = "The field must not be empty";
     return false;
   }
 };
 
 var resetInputZipCode = function () {
-  zipCodeText.innerHTML = "Zip Code";
-  zipCodeText.classList.remove("error-text");
-  zipCodeInput.classList.remove("validate-input");
-  zipCodeInput.classList.remove("error-input");
-  errorZipCodeClass.classList.remove("error");
-  errorZipCodeClass.classList.add("label-none");
+  resetStyles(zipCodeText, zipCodeInput, errorZipCodeClass, "Zip Code");
 };
 
 var validateEmail = function () {
   if (!emailExpression.test(emailInput.value.trim())) {
-    emailText.innerHTML = "Email*";
-    emailText.classList.add("error-text");
-    emailInput.classList.add("error-input");
-    errorEmailClass.classList.add("error");
-    errorEmailClass.classList.remove("label-none");
+    stylesValidate(emailText, emailInput, errorEmailClass, "Email");
     return false;
   } else {
     emailInput.classList.add("validate-input");
@@ -508,12 +391,7 @@ var validateEmail = function () {
 };
 
 var resetInputEmail = function () {
-  emailText.innerHTML = "Email";
-  emailText.classList.remove("error-text");
-  emailInput.classList.remove("validate-input");
-  emailInput.classList.remove("error-input");
-  errorEmailClass.classList.remove("error");
-  errorEmailClass.classList.add("label-none");
+  resetStyles(emailText, emailInput, errorEmailClass, "Email");
 };
 
 var validatePassword = function () {
@@ -529,11 +407,12 @@ var validatePassword = function () {
     ) {
       letter = true;
     } else {
-      passwordText.innerHTML = "Password*";
-      passwordText.classList.add("error-text");
-      passwordInput.classList.add("error-input");
-      errorPasswordClass.classList.add("error");
-      errorPasswordClass.classList.remove("label-none");
+      stylesValidate(
+        passwordText,
+        passwordInput,
+        errorPasswordClass,
+        "Password"
+      );
       errorPasswordClass.innerHTML =
         "Password must have only letter and numbers";
       return false;
@@ -546,6 +425,12 @@ var validatePassword = function () {
       passwordInput.classList.add("error-input");
       errorPasswordClass.classList.add("error");
       errorPasswordClass.classList.remove("label-none");
+      stylesValidate(
+        passwordText,
+        passwordInput,
+        errorPasswordClass,
+        "Password"
+      );
       errorPasswordClass.innerHTML = "Password must have at least 8 characters";
       return false;
     } else {
@@ -566,23 +451,14 @@ var validatePassword = function () {
       }
     }
   } else {
-    passwordText.innerHTML = "Password*";
-    passwordText.classList.add("error-text");
-    passwordInput.classList.add("error-input");
-    errorPasswordClass.classList.add("error");
-    errorPasswordClass.classList.remove("label-none");
+    stylesValidate(passwordText, passwordInput, errorPasswordClass, "Password");
     errorPasswordClass.innerHTML = "Password must have only letter and numbers";
     return false;
   }
 };
 
 var resetInputPassword = function () {
-  passwordText.innerHTML = "Password";
-  passwordText.classList.remove("error-text");
-  passwordInput.classList.remove("validate-input");
-  passwordInput.classList.remove("error-input");
-  errorPasswordClass.classList.remove("error");
-  errorPasswordClass.classList.add("label-none");
+  resetStyles(passwordText, passwordInput, errorPasswordClass, "Password");
 };
 
 var validateRepeatPassword = function () {
@@ -598,11 +474,12 @@ var validateRepeatPassword = function () {
     ) {
       letter = true;
     } else {
-      passwordRepeatText.innerHTML = "Repeat Password*";
-      passwordRepeatText.classList.add("error-text");
-      passwordRepeatInput.classList.add("error-input");
-      errorPasswordRepeatClass.classList.add("error");
-      errorPasswordRepeatClass.classList.remove("label-none");
+      stylesValidate(
+        passwordRepeatText,
+        passwordRepeatInput,
+        errorPasswordRepeatClass,
+        "Repeat Password"
+      );
       errorPasswordRepeatClass.innerHTML =
         "Password must have only letter and numbers";
       return false;
@@ -610,11 +487,12 @@ var validateRepeatPassword = function () {
   }
   if (letter && number) {
     if (passwordRepeatInput.value.length < 8) {
-      passwordRepeatText.innerHTML = "Repeat Password*";
-      passwordRepeatText.classList.add("error-text");
-      passwordRepeatInput.classList.add("error-input");
-      errorPasswordRepeatClass.classList.add("error");
-      errorPasswordRepeatClass.classList.remove("label-none");
+      stylesValidate(
+        passwordRepeatText,
+        passwordRepeatInput,
+        errorPasswordRepeatClass,
+        "Repeat Password"
+      );
       errorPasswordRepeatClass.innerHTML =
         "Password must have at least 8 characters";
       return false;
@@ -636,11 +514,12 @@ var validateRepeatPassword = function () {
       }
     }
   } else {
-    passwordRepeatText.innerHTML = "Repeat Password*";
-    passwordRepeatText.classList.add("error-text");
-    passwordRepeatInput.classList.add("error-input");
-    errorPasswordRepeatClass.classList.add("error");
-    errorPasswordRepeatClass.classList.remove("label-none");
+    stylesValidate(
+      passwordRepeatText,
+      passwordRepeatInput,
+      errorPasswordRepeatClass,
+      "Repeat Password"
+    );
     errorPasswordRepeatClass.innerHTML =
       "Password must have only letter and numbers";
     return false;
@@ -648,12 +527,12 @@ var validateRepeatPassword = function () {
 };
 
 var resetInputRepeatPassword = function () {
-  passwordRepeatText.innerHTML = "Repeat Password";
-  passwordRepeatText.classList.remove("error-text");
-  passwordRepeatInput.classList.remove("validate-input");
-  passwordRepeatInput.classList.remove("error-input");
-  errorPasswordRepeatClass.classList.remove("error");
-  errorPasswordRepeatClass.classList.add("label-none");
+  resetStyles(
+    passwordRepeatText,
+    passwordRepeatInput,
+    errorPasswordRepeatClass,
+    "Repeat Password"
+  );
 };
 
 var validateAllInformation = function () {
@@ -729,7 +608,7 @@ var registerValidate = function (e) {
       })
       .then(function (resp) {
         if (!resp.success) {
-          throw new Error(JSON.stringify(resp));
+          throw new Error(JSON.stringify(resp.errors));
         }
         localStorage.setItem("name", nameValue);
         localStorage.setItem("surname", surnameValue);
@@ -748,30 +627,31 @@ var registerValidate = function (e) {
         otherData.innerHTML =
           "Name: " +
           nameInput.value +
-          "\nSurname: " +
+          ",\nSurname: " +
           surnameInput.value +
-          "\nDNI: " +
+          ",\nDNI: " +
           dniInput.value +
-          "\nBirthday: " +
+          ",\nBirthday: " +
           birthdayInput.value +
-          "\nPhone: " +
+          ",\nPhone: " +
           phoneInput.value +
-          "\naddress: " +
+          ",\naddress: " +
           addressInput.value +
-          "\nCity: " +
+          ",\nCity: " +
           cityInput.value +
-          "\nZip Code: " +
+          ",\nZip Code: " +
           zipCodeInput.value +
-          "\nEmail: " +
+          ",\nEmail: " +
           emailInput.value +
-          "\nPassword: " +
+          ",\nPassword: " +
           passwordInput.value;
       })
       .catch(function (err) {
+        console.log(err);
         modalErrorLogin.style.display = "block";
         modalErrorText.innerHTML =
           "The request could not be performed successfully:";
-        contentErrorModal.innerHTML = err.msg;
+        contentErrorModal.innerHTML = err;
       });
   } else {
     modalErrorLogin.style.display = "block";
